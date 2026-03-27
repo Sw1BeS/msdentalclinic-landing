@@ -1127,6 +1127,11 @@ a {
     background: #1a2b33;
     padding: 32px 20px;
     text-align: center;
+    color: #ffffff;
+}
+
+.lp-footer * {
+    color: #ffffff !important;
 }
 
 .lp-footer-logo {
@@ -1146,7 +1151,7 @@ a {
     font-family: var(--font-display);
     font-weight: 700;
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.8);
+    color: #ffffff !important;
 }
 
 .lp-footer-contacts {
@@ -1157,14 +1162,14 @@ a {
 }
 
 .lp-footer-contacts a {
-    color: #ffffff;
+    color: #ffffff !important;
     font-size: 15px;
     font-weight: 500;
     transition: color var(--transition-base);
 }
 
 .lp-footer-contacts a:hover {
-    color: var(--brand-cyan);
+    color: var(--brand-cyan) !important;
 }
 
 .lp-footer-addresses {
@@ -1175,12 +1180,12 @@ a {
 }
 
 .lp-footer-addresses p {
-    color: rgba(255, 255, 255, 0.85);
+    color: #ffffff !important;
     font-size: 13px;
 }
 
 .lp-footer-copy {
-    color: rgba(255, 255, 255, 0.5);
+    color: #ffffff !important;
     font-size: 12px;
 }
 
