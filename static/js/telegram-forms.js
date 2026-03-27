@@ -1,7 +1,7 @@
 /**
  * Telegram Forms Handler
- * Відправка форм в Telegram
- * 
+ * Відправка форм в Telegram + БД
+ *
  * Налаштування:
  * 1. Створіть Telegram бота через @BotFather
  * 2. Отримайте токен бота
@@ -10,9 +10,9 @@
  */
 
 const TELEGRAM_CONFIG = {
-    // 🔧 ЗАМІНІТЬ НА ВАШІ ЗНАЧЕННЯ
-    botToken: 'YOUR_BOT_TOKEN_HERE',      // Токен бота від @BotFather
-    chatId: 'YOUR_CHAT_ID_HERE'           // Ваш chat_id
+    // ✅ Налаштовано
+    botToken: '8600696729:AAHBhrnTUzRzOr7DEssWxO6-f0pWlEDrSnw',
+    chatId: '219480233'
 };
 
 // Перевірка телефону (12 цифр, починається з 380)
@@ -26,7 +26,7 @@ function validateName(value) {
     return value.trim().length >= 2;
 }
 
-// Відправка в Telegram
+// Відправка в БД + Telegram
 async function sendToTelegram(name, phone, page = 'Невідомо') {
     const message = `
 🦷 *Нова заявка з сайту*
@@ -37,9 +37,26 @@ async function sendToTelegram(name, phone, page = 'Невідомо') {
 ⏰ *Час:* ${new Date().toLocaleString('uk-UA')}
     `.trim();
 
-    const url = `https://api.telegram.org/bot${TELEGRAM_CONFIG.botToken}/sendMessage`;
-    
+    // Спочатку відправляємо в БД (якщо доступна)
     try {
+        await fetch('/callme/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: name,
+                tel: phone
+            })
+        });
+        console.log('Data sent to database');
+    } catch (dbError) {
+        console.log('Database not available, sending only to Telegram');
+    }
+
+    // Потім відправляємо в Telegram
+    try {
+        const url = `https://api.telegram.org/bot${TELEGRAM_CONFIG.botToken}/sendMessage`;
         const response = await fetch(url, {
             method: 'POST',
             headers: {
