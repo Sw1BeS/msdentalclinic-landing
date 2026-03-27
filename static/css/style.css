@@ -499,11 +499,37 @@ body {
 }
 
 .call-me-card {
-    background: rgba(255, 255, 255, 0.9);
+    background: #1a2b33;
     box-shadow: 0px 4px 84px rgba(0, 0, 0, 0.11);
     /* Note: backdrop-filter has minimal browser support */
     border-radius: 20px 20px;
     padding: 3rem 3rem;
+}
+
+.call-me-card .section-header,
+.call-me-card .section-header span {
+    color: #ffffff !important;
+}
+
+.call-me-card p {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.call-me-card input.form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff !important;
+}
+
+.call-me-card input.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.call-me-card input.form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #439cc3;
+    color: #ffffff;
+    box-shadow: 0 0 0 0.2rem rgba(67, 156, 195, 0.25);
 }
 
 #prices table tr:last-child td {
