@@ -240,13 +240,32 @@ a {
    CTA FORM CARD (Inline Hero)
    ======================================== */
 .cta-card {
-    background: var(--card-bg);
+    background: #1a2b33;
     border-radius: var(--radius-lg);
     padding: 32px 24px;
     box-shadow: var(--card-shadow-lg);
     max-width: 440px;
     width: 100%;
     margin: 0 auto;
+}
+
+.cta-card .form-label {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.cta-card .form-input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff !important;
+}
+
+.cta-card .form-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.cta-card .form-input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #439cc3;
 }
 
 .cta-card-title {
@@ -273,7 +292,7 @@ a {
     display: block;
     font-size: 13px;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: var(--text-secondary);
     margin-bottom: 6px;
 }
 
