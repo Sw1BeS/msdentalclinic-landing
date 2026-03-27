@@ -1,0 +1,518 @@
+:root {
+    --main-bg-color: #385a67;
+    --main-accent-color: #439cc3;
+    --main-grey-color: #dddfe4;
+}
+
+body {
+    background-color: #f5fbfe;
+    transition: all 0.5s;
+}
+
+.header-bg {
+    background-color: var(--main-bg-color) !important;
+}
+
+@media (min-width: 0px) {
+    .header-bg {
+        background-image: url(../img/tooth_header_mobile_bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #172228 !important;
+        background-size: cover;
+    }
+}
+
+@media (min-width: 768px) {
+    .header-bg {
+        background: var(--main-bg-color) !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .header-bg {
+        background-color: var(--main-bg-color) !important;
+    }
+}
+
+.navbar .nav-item .nav-link {
+    color: #fff;
+}
+
+.head-tooth-btn {
+    border-width: 2px;
+    border-color: #33f7ff;
+    border-radius: 0;
+}
+
+.head-tooth-btn:hover {
+    background: rgba(51, 247, 255, 0.1) !important;
+    color: #fff !important;
+    border-color: rgba(51, 247, 255, 0.1);
+    border-width: 2px;
+}
+
+.head-tooth-btn:active {
+    color: #cfcece !important;
+    border-color: rgba(51, 247, 255, 0.1) !important;
+    border-width: 2px;
+}
+
+.submit-tooth-btn {
+    border-width: 2px;
+    border-color: #439cc3;
+    border-radius: 0;
+    color: #439cc3;
+}
+
+.submit-tooth-btn:active {
+    color: #439cc3;
+    border-width: 2px;
+    border-color: #439cc3;
+    border-radius: 0;
+}
+
+.submit-tooth-btn:hover {
+    background: rgba(51, 247, 255, 0.1) !important;
+    color: #439cc3 !important;
+    border-color: rgba(51, 247, 255, 0.1);
+    border-width: 2px;
+}
+
+.submit-tooth-btn:active {
+    color: #439cc3 !important;
+    border-color: rgba(51, 247, 255, 0.1) !important;
+    border-width: 2px;
+}
+
+.header-plus {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    left: 50%;
+    top: 10%;
+
+    filter: blur(8px);
+    z-index: 1;
+}
+
+/* Media query for mobile phones */
+@media only screen and (max-width: 767px) {
+    .header-plus {
+        display: none;
+    }
+}
+
+.header-tooth-img {
+    z-index: 3;
+    border-radius: 180px 20px;
+    position: relative;
+}
+
+.main-h1 {
+    background: linear-gradient(90deg, #9fdefd 1.53%, #33f6ff 91.92%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 84px;
+    line-height: 97px;
+
+    margin-top: 10rem !important;
+}
+
+.main-sub-head {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    color: #ffffff;
+    margin-bottom: 6rem;
+}
+
+.tooth_brash_block {
+    background-image: url(../img/tooth_brash_gb.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #f5fbfe;
+}
+
+.services {
+    background: rgba(255, 255, 255, 0.75);
+    opacity: 0.9;
+    box-shadow: 0px 4px 84px rgba(0, 0, 0, 0.11);
+    backdrop-filter: blur(31px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 20px 180px;
+    margin-top: -100px;
+    padding: 3rem 6rem;
+}
+
+.section-header {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 46px;
+    margin-top: 100px;
+    color: #000000;
+}
+
+.services-item-header {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #439cc4;
+}
+.services-item-text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.price-list-header {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 46px;
+}
+
+.price-list-h3 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+
+    color: #000000;
+}
+
+.price-list-text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 43px;
+    color: #000000;
+}
+
+.specialists {
+    margin-top: 12rem !important;
+}
+
+.specialist-card {
+    /*border-radius: 20px;*/
+    border: 0;
+    box-shadow: 0px 13px 23px rgba(0, 0, 0, 0.06);
+}
+
+.ellipse_with_tooth {
+    margin-top: -60px;
+}
+
+.card-title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.wrap {
+    overflow: hidden;
+    position: relative;
+}
+
+.review-bg {
+    opacity: 0.1;
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    position: relative;
+}
+
+.review-card {
+    background: #ffffff;
+    box-shadow: 0px 13px 23px rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    border: 0;
+}
+
+.review-text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.review-name {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.review-time {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.review-quote-img {
+    position: absolute;
+    left: 85%;
+    top: 80%;
+}
+
+.address_sub_text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+.address_cards_position {
+    margin-top: -45%;
+    margin-left: -5%;
+}
+
+.address_pointer_1 {
+    margin-top: -35%;
+    margin-left: 64%;
+}
+
+.address_pointer_2 {
+    margin-top: -41%;
+    margin-left: 63%;
+}
+.address_pointer_1.active {
+    margin-top: -36%;
+    margin-left: 63%;
+}
+
+.address_pointer_2.active {
+    margin-top: -42%;
+    margin-left: 62%;
+}
+
+.address_pointer_1,
+.address_pointer_2 {
+    zoom: 75%;
+}
+
+.address_pointer_1.active,
+.address_pointer_2.active {
+    zoom: 100%;
+}
+
+@media (max-width: 992px) {
+    .mobile-map-1.active,
+    .mobile-map-2.active {
+        display: block !important;
+    }
+}
+
+.address_card {
+    background: rgba(255, 255, 255, 1);
+    opacity: 0.85;
+    box-shadow: 0px 4.20255px 77.7471px rgba(0, 0, 0, 0.14);
+    border: 0;
+    border-radius: 20px;
+}
+.address_card.active {
+    border: 3px solid #4dabe7;
+}
+
+.address_card .clinic_name {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16.8102px;
+    line-height: 32px;
+    color: #2b73b4;
+}
+.address_card .address {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21.0127px;
+    line-height: 32px;
+}
+
+.address_card .phone {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21.0127px;
+    line-height: 32px;
+}
+
+.address_card .time {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16.8102px;
+    line-height: 32px;
+}
+
+.footer_bg {
+    background: #1d486e;
+    background-image: url(../img/footer_img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer_bg_img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.tooth-btn {
+    border-radius: 0px;
+}
+
+.tooth-btn:hover {
+    background: rgba(51, 247, 255, 0.1) !important;
+    color: #fff !important;
+    border-color: rgba(51, 247, 255, 0.1);
+    border-width: 1px;
+    border-radius: 0px;
+}
+
+.tooth-btn:active {
+    color: #cfcece !important;
+    border-color: rgba(51, 247, 255, 0.1) !important;
+    border-width: 1px;
+    border-radius: 0px;
+}
+
+.modal-cheader {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #000000;
+}
+.modal-sub-header {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height, or 139% */
+
+    color: #000000;
+}
+
+.modal-address {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height, or 150% */
+
+    color: #000000;
+}
+
+.modal-phone {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height, or 150% */
+
+    color: #000000;
+}
+
+.round-button {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #439cc3;
+    border: 0;
+}
+
+.card-nav-text {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 29px;
+    /* or 161% */
+
+    text-align: center;
+
+    color: #439cc3;
+}
+
+.google-maps {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 40%; /* desired aspect ratio */
+    margin-left: 15%;
+    margin-right: 15%;
+    position: relative;
+}
+
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    .google-maps {
+        padding-bottom: 80%; /* desired aspect ratio for mobile devices */
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+.call-me-card {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 84px rgba(0, 0, 0, 0.11);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 20px 20px;
+    padding: 3rem 3rem;
+}
+
+#prices table tr:last-child td {
+    border-bottom: none;
+}
+#prices table tr {
+    border-color: #c4cfcc !important;
+}
+
+#prices table tr td:last-child {
+    text-align: end;
+}

@@ -1,0 +1,108 @@
+:root {
+    --main-bg-color: #385a67;
+    --main-accent-color: #439cc3;
+    --main-grey-color: #dddfe4;
+  }
+
+  
+ body{
+  background-color: #f5fbfe;
+  transition: all 0.5s;
+}
+
+
+ 
+
+
+
+
+
+
+
+
+.navbar .nav-item .nav-link{
+  color: #000;
+}
+
+.head-tooth-btn{
+  border-width: 2px;
+  border-color: #33F7FF;
+  border-radius: 0;
+}
+  
+.head-tooth-btn:hover{
+  background: rgba(51, 247, 255, 0.1) !important;
+  color: #fff!important;
+  border-color:   rgba(51, 247, 255, 0.1);
+  border-width:  2px;
+}
+
+.head-tooth-btn:active {
+  color: #cfcece !important;
+  border-color:   rgba(51, 247, 255, 0.1) !important;
+  border-width:  2px;
+}
+
+
+ 
+
+
+.modal-cheader{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 17px;
+line-height: 21px;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+color: #000000;
+}
+.modal-sub-header{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 25px;
+/* identical to box height, or 139% */
+
+
+color: #000000;
+}
+
+.modal-address{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height, or 150% */
+
+
+color: #000000;
+}
+
+.modal-phone{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height, or 150% */
+
+
+color: #000000;
+}
+
+
+
+.link{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+text-align: center;
+text-decoration-line: underline;
+
+color: #4DABE7;
+}

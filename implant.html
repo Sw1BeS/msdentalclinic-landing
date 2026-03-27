@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Імплантація зубів в Одесі — MS Dental Clinic</title>
+    <meta name="description"
+        content="Безболісна імплантація зубів в Одесі. Системи Straumann (Швейцарія) та Megagen (Корея). Тимчасові конструкції за 1 тиждень. Запис на консультацію.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <link rel="icon" type="image/x-icon" href="static/img/favicon.ico">
+
+    <!-- Typography: Unified Montserrat (Local) -->
+    <link rel="stylesheet" href="static/css/montserrat.css">
+    <link rel="stylesheet" href="static/css/implant.css">
+    <script src="static/js/telegram-forms.js"></script>
+
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-logo">
+            <img src="static/img/logo.svg" alt="MS Dental Clinic" width="40" height="50">
+            <span>MS Dental Clinic</span>
+        </div>
+        <div class="header-contacts">
+            <a href="tel:0636171555" class="header-phone">063 617 15 55</a>
+            <a href="tel:0938559559" class="header-phone">093 855 95 59</a>
+            <button class="header-btn" onclick="openContactForm()">Записатися</button>
+        </div>
+    </header>
+
+    <!-- ============================
+         HERO SECTION
+         ============================ -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge reveal">
+                    <span class="hero-badge-dot"></span>
+                    Безкоштовна консультація
+                </div>
+
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    Записатися на консультацію
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="fade-in-word" style="animation-delay: 0.1s">Імплантація</span>
+                    <span class="fade-in-word" style="animation-delay: 0.2s">зубів</span><br>
+                    <span class="fade-in-word" style="animation-delay: 0.3s">в</span>
+                    <span class="fade-in-word" style="animation-delay: 0.4s"><span>Одесі</span></span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Безболісна, швидка та довгострокова імплантація зубів — це реальність в MS Dental Clinic. Від
+                    одиничних реставрацій до тотальних робіт.
+                </p>
+
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg>
+                        </div>
+                        <span>Системи Straumann 🇨🇭 та Megagen 🇰🇷</span>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg>
+                        </div>
+                        <span>Тимчасові конструкції за 1 тиждень</span>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg>
+                        </div>
+                        <span>Тотальна реабілітація під ключ</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-container">
+                <img class="hero-image" src="static/img/landing/hero-implant.png" alt="Дентальний імплант" width="420"
+                    height="420" loading="eager">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         FORM SECTION (First CTA)
+         ============================ -->
+    <section class="section" id="form-top" style="padding-top: 48px; padding-bottom: 48px;">
+        <div class="section-container">
+            <div class="cta-card" id="cta-card-top">
+                <h2 class="cta-card-title">Запишіться на безкоштовну консультацію</h2>
+                <p class="cta-card-subtitle">Наші спеціалісти зв'яжуться з вами протягом 30 хвилин</p>
+
+                <form id="lead-form-top" novalidate>
+                    <div class="form-group">
+                        <label class="form-label" for="name-top">Ваше ім'я *</label>
+                        <input type="text" class="form-input" id="name-top" name="name"
+                            placeholder="Як до вас звертатися?" required autocomplete="name">
+                        <p class="form-error" id="name-error-top">Будь ласка, вкажіть ваше ім'я</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="tel-top">Номер телефону *</label>
+                        <input type="tel" class="form-input" id="tel-top" name="tel" placeholder="+380 (XX) XXX-XX-XX"
+                            required autocomplete="tel" inputmode="tel">
+                        <p class="form-error" id="tel-error-top">Вкажіть коректний номер телефону</p>
+                    </div>
+                    <button type="submit" class="btn-primary" id="submit-top">
+                        <span class="btn-text">Записатися на консультацію</span>
+                        <span class="spinner"></span>
+                    </button>
+                    <p class="form-privacy">Натискаючи кнопку, ви даєте згоду на обробку персональних даних</p>
+                </form>
+
+                <div class="form-success" id="success-top">
+                    <div class="form-success-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                        </svg>
+                    </div>
+                    <h3>Дякуємо за заявку!</h3>
+                    <p>Наші спеціалісти зв'яжуться з вами найближчим часом</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         USP SECTION
+         ============================ -->
+    <section class="section" id="usp">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <p class="section-label">Чому обирають нас</p>
+                <h2 class="section-title">Імплантація для будь-якої клінічної ситуації</h2>
+                <p class="section-subtitle">Широкий асортимент імплантатів від світових лідерів для кожного бюджету</p>
+            </div>
+
+            <div class="usp-grid">
+                <div class="usp-card reveal reveal-delay-1">
+                    <div class="usp-icon blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h3>Преміум-системи Straumann</h3>
+                    <p>Швейцарська якість з пожиттєвою гарантією. Найвищий відсоток приживлення у світі — понад 98.8%.
+                    </p>
+                </div>
+
+                <div class="usp-card reveal reveal-delay-2">
+                    <div class="usp-icon teal">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12,6 12,12 16,14" />
+                        </svg>
+                    </div>
+                    <h3>Тимчасові зуби за тиждень</h3>
+                    <p>Не потрібно ходити «без зубів». Протягом 7 днів ви отримаєте тимчасові ортопедичні конструкції.
+                    </p>
+                </div>
+
+                <div class="usp-card reveal reveal-delay-3">
+                    <div class="usp-icon amber">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h3>Тотальна реабілітація</h3>
+                    <p>Комплексне відновлення від 4 до 8 імплантатів на щелепу. Від діагностики до постійного протезу —
+                        під ключ.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         BRANDS STRIP
+         ============================ -->
+    <div class="brands-strip reveal">
+        <p>Працюємо з імплантатами світових брендів</p>
+        <div class="brands-logos">
+            <div class="brand-item">Straumann<small>Швейцарія</small></div>
+            <div class="brand-item">Megagen<small>Корея</small></div>
+            <div class="brand-item">Cell<small>Німеччина</small></div>
+            <div class="brand-item">S-Plant<small>Корея</small></div>
+        </div>
+    </div>
+
+    <!-- ============================
+         CASES (Before / After)
+         ============================ -->
+    <section class="section cases-section" id="cases">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <p class="section-label">Реальні результати</p>
+                <h2 class="section-title">Кейси наших пацієнтів</h2>
+                <p class="section-subtitle">Підкріплюємо слова реальними результатами — нижче фото робіт наших
+                    спеціалістів</p>
+            </div>
+
+
+            <div class="cases-grid">
+                <!-- 1st Case -->
+                <div class="premium-case-card reveal" data-category="total">
+                    <span class="case-counter-badge">Кейс 01/06</span>
+                    <div class="case-gallery-bento">
+                        <div class="bento-item bento-main">
+                            <img src="static/img/landing/IMG_5461.JPG" alt="Результат роботи" loading="lazy">
+                            <span class="ba-label label-after">Результат</span>
+                        </div>
+                        <div class="bento-item">
+                            <img src="static/img/landing/IMG_5457.JPG" alt="Тимчасовий етап" loading="lazy">
+                        </div>
+                        <div class="bento-item">
+                            <img src="static/img/landing/IMG_5460.JPG" alt="М'які тканини" loading="lazy">
+                        </div>
+                        <div class="bento-item">
+                            <img src="static/img/landing/IMG_5459.JPG" alt="Мульти-юніти" loading="lazy">
+                        </div>
+                        <div class="bento-item">
+                            <img src="static/img/landing/IMG_5458.JPG" alt="Протез" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="premium-case-content">
+                        <h3>Тотальна реабілітація (All-on-6)</h3>
+                        <p>Повне відновлення на верхній щелепі з використанням Megagen AnyRidge🇰🇷. Від тимчасового
+                            протезу до ідеальної металокераміки.</p>
+                        <div class="premium-case-tags">
+                            <span class="premium-tag">Megagen AnyRidge 🇰🇷</span>
+                            <span class="premium-tag">Тотальна робота</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2nd Case -->
+                <div class="premium-case-card reveal" data-category="total">
+                    <span class="case-counter-badge">Кейс 02/06</span>
+                    <div class="ba-slider" data-ba-slider>
+                        <div class="ba-img before" style="background-image: url('static/img/landing/IMG_5456.JPG');">
+                        </div>
+                        <div class="ba-img after" style="background-image: url('static/img/landing/IMG_5455.JPG');">
+                        </div>
+                        <div class="ba-handle"></div>
+                        <div class="ba-hint">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <path d="m18 8 4 4-4 4M6 8l-4 4 4 4" />
+                            </svg>
+                            <span>Порівняти (До/Після)</span>
+                        </div>
+                        <span class="ba-label label-before">До</span>
+                        <span class="ba-label label-after">Після</span>
+                    </div>
+                    <div class="premium-case-content">
+                        <h3>Реабілітація на Straumann 🇨🇭</h3>
+                        <p>Встановлено 6 швейцарських імплантатів з негайним навантаженням тимчасовим протезом.</p>
+                        <div class="premium-case-tags">
+                            <span class="premium-tag">Straumann 🇨🇭</span>
+                            <span class="premium-tag">Швейцарія</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3rd Case -->
+                <div class="premium-case-card reveal" data-category="total">
+                    <span class="case-counter-badge">Кейс 03/06</span>
+                    <div class="case-gallery-bento" style="grid-template-columns: 1fr 1fr;">
+                        <div class="bento-item" style="grid-row: span 2;">
+                            <img src="static/img/landing/IMG_5464.JPG" alt="Фінал" loading="lazy">
+                            <span class="ba-label label-after"
+                                style="right: 12px; bottom: 12px; font-size: 10px;">Результат</span>
+                        </div>
+                        <div class="bento-item">
+                            <img src="static/img/landing/IMG_5462.JPG" alt="Процес" loading="lazy">
+                        </div>
+                        <div class="bento-item">
+                            <img src="static/img/landing/IMG_5463.JPG" alt="Вигляд" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="premium-case-content">
+                        <h3>Тотальна робота S-plant 🇰🇷</h3>
+                        <p>Металокерамічний мостоподібний незнімний протез. Повне відновлення жувальної функції.</p>
+                        <div class="premium-case-tags">
+                            <span class="premium-tag">S-plant 🇰🇷</span>
+                            <span class="premium-tag">Металокераміка</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4th Case -->
+                <div class="premium-case-card reveal" data-category="aesthetic">
+                    <span class="case-counter-badge">Кейс 04/06</span>
+                    <div class="ba-slider" data-ba-slider>
+                        <div class="ba-img before" style="background-image: url('static/img/landing/IMG_5465.JPG');">
+                        </div>
+                        <div class="ba-img after" style="background-image: url('static/img/landing/IMG_5466.JPG');">
+                        </div>
+                        <div class="ba-handle"></div>
+                        <div class="ba-hint">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <path d="m18 8 4 4-4 4M6 8l-4 4 4 4" />
+                            </svg>
+                            <span>До / Після</span>
+                        </div>
+                        <span class="ba-label label-before">До</span>
+                        <span class="ba-label label-after">Після</span>
+                    </div>
+                    <div class="premium-case-content">
+                        <h3>Цирконієві коронки</h3>
+                        <p>Встановлення на імплантатах та на власному зубі для досягнення ідеальної естетики посмішки.
+                        </p>
+                        <div class="premium-case-tags">
+                            <span class="premium-tag">Цирконій</span>
+                            <span class="premium-tag">Естетика</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5th Case -->
+                <div class="premium-case-card reveal" data-category="single">
+                    <span class="case-counter-badge">Кейс 05/06</span>
+                    <div class="ba-slider" data-ba-slider>
+                        <div class="ba-img before" style="background-image: url('static/img/landing/IMG_5489.JPG');">
+                        </div>
+                        <div class="ba-img after" style="background-image: url('static/img/landing/IMG_5488.JPG');">
+                        </div>
+                        <div class="ba-handle"></div>
+                        <div class="ba-hint">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <path d="m18 8 4 4-4 4M6 8l-4 4 4 4" />
+                            </svg>
+                            <span>Порівняти результат</span>
+                        </div>
+                        <span class="ba-label label-before">До</span>
+                        <span class="ba-label label-after">Після</span>
+                    </div>
+                    <div class="premium-case-content">
+                        <h3>Поодинокі дефекти</h3>
+                        <p>Заміщення втрачених зубів з максимальною відповідністю природним формам та кольору.</p>
+                        <div class="premium-case-tags">
+                            <span class="premium-tag">Естетика</span>
+                            <span class="premium-tag">Імплантація</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6th Case -->
+                <div class="premium-case-card reveal" data-category="total">
+                    <span class="case-counter-badge">Кейс 06/06</span>
+                    <div class="ba-slider" data-ba-slider>
+                        <div class="ba-img before" style="background-image: url('static/img/landing/IMG_6160.JPG');">
+                        </div>
+                        <div class="ba-img after" style="background-image: url('static/img/landing/IMG_6161.JPG');">
+                        </div>
+                        <div class="ba-handle"></div>
+                        <div class="ba-hint">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <path d="m18 8 4 4-4 4M6 8l-4 4 4 4" />
+                            </svg>
+                            <span>Повний результат</span>
+                        </div>
+                        <span class="ba-label label-before">До</span>
+                        <span class="ba-label label-after">Після</span>
+                    </div>
+                    <div class="premium-case-content">
+                        <h3>Тотальна реабілітація (All-on-4)</h3>
+                        <p>Повне відновлення зубного ряду. Від складної хірургії до сяючої посмішки в короткі терміни.
+                        </p>
+                        <div class="premium-case-tags">
+                            <span class="premium-tag">All-on-4</span>
+                            <span class="premium-tag">Megagen 🇰🇷</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         STEPS SECTION
+         ============================ -->
+    <section class="section" id="steps">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <p class="section-label">Як це працює</p>
+                <h2 class="section-title">4 кроки до ідеальної посмішки</h2>
+                <p class="section-subtitle">Прозорий процес від першої консультації до результату</p>
+            </div>
+
+            <div class="steps-list">
+                <div class="steps-line"></div>
+
+                <div class="step-item reveal">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Запис на консультацію</h3>
+                        <p>Огляд, 3D-діагностика, складання індивідуального плану лікування та визначення точної
+                            вартості.</p>
+                    </div>
+                </div>
+
+                <div class="step-item reveal">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Встановлення імплантатів</h3>
+                        <p>Безболісна хірургічна процедура. Використання сучасних методик та гарантія стерильності.</p>
+                    </div>
+                </div>
+
+                <div class="step-item reveal">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Тимчасові конструкції</h3>
+                        <p>Вже через тиждень ви отримуєте тимчасові зуби та повертаєтесь до звичного життя.</p>
+                    </div>
+                </div>
+
+                <div class="step-item reveal">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Постійний протез</h3>
+                        <p>Після повного приживлення імплантатів (3-6 місяців) встановлюємо постійну конструкцію —
+                            красива посмішка на все життя.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         SPECIALISTS SECTION
+         ============================ -->
+    <section class="section" id="specialists">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <p class="section-label">Наші лікарі</p>
+                <h2 class="section-title">Команда експертів MS Dental</h2>
+                <p class="section-subtitle">Провідні фахівці Одеси з багаторічним досвідом в імплантології та естетичній
+                    стоматології</p>
+            </div>
+
+            <div class="specialists-grid">
+                <div class="specialist-card reveal">
+                    <img src="static/img/doctors/1.jpg" alt="Скліфасовський Василь Васильович" class="specialist-photo"
+                        loading="lazy">
+                    <div class="specialist-info">
+                        <h3 class="specialist-name">Скліфасовський Василь Васильович</h3>
+                        <p class="specialist-title">Лікар-стоматолог хірург, ортопед вищої категорії. Спеціаліст з
+                            тотальної реабілітації.</p>
+                    </div>
+                </div>
+
+                <div class="specialist-card reveal">
+                    <img src="static/img/doctors/2.jpg" alt="Мамбик Олег Петрович" class="specialist-photo"
+                        loading="lazy">
+                    <div class="specialist-info">
+                        <h3 class="specialist-name">Мамбик Олег Петрович</h3>
+                        <p class="specialist-title">Лікар-стоматолог ортодонт, ортопед, терапевт вищої категорії.</p>
+                    </div>
+                </div>
+
+                <div class="specialist-card reveal">
+                    <img src="static/img/doctors/5.jpg" alt="Скліфасовський Вадим Васильович" class="specialist-photo"
+                        loading="lazy">
+                    <div class="specialist-info">
+                        <h3 class="specialist-name">Скліфасовський Вадим Васильович</h3>
+                        <p class="specialist-title">Лікар-стоматолог хірург, ортопед. Експерт зі складних клінічних
+                            випадків.</p>
+                    </div>
+                </div>
+
+                <div class="specialist-card reveal">
+                    <img src="static/img/doctors/4.jpg" alt="Гладушевська Вікторія Олегівна" class="specialist-photo"
+                        loading="lazy">
+                    <div class="specialist-info">
+                        <h3 class="specialist-name">Гладушевська Вікторія Олегівна</h3>
+                        <p class="specialist-title">Лікар-стоматолог хірург, ортопед, терапевт.</p>
+                    </div>
+                </div>
+
+                <div class="specialist-card reveal">
+                    <img src="static/img/doctors/7.jpg" alt="Стрижак Сергій Володимирович" class="specialist-photo"
+                        loading="lazy">
+                    <div class="specialist-info">
+                        <h3 class="specialist-name">Стрижак Сергій Володимирович</h3>
+                        <p class="specialist-title">Лікар-стоматолог хірург, ортопед, терапевт. Естетична стоматологія.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="specialist-card reveal">
+                    <img src="static/img/doctors/3.jpg" alt="Чуева Олена Петрівна" class="specialist-photo"
+                        loading="lazy">
+                    <div class="specialist-info">
+                        <h3 class="specialist-name">Чуева Олена Петрівна</h3>
+                        <p class="specialist-title">Лікар-стоматолог терапевт вищої категорії.</p>
+                    </div>
+                </div>
+
+                <div class="specialist-card reveal">
+                    <img src="static/img/doctors/6.jpg" alt="Мамбик Анастасія Олегівна" class="specialist-photo"
+                        loading="lazy">
+                    <div class="specialist-info">
+                        <h3 class="specialist-name">Мамбик Анастасія Олегівна</h3>
+                        <p class="specialist-title">Лікар-стоматолог терапевт.</p>
+                    </div>
+                </div>
+
+                <div class="specialist-card reveal">
+                    <img src="static/img/doctors/12.jpg" alt="Мушкетова Вероніка Дмитрівна" class="specialist-photo"
+                        loading="lazy">
+                    <div class="specialist-info">
+                        <h3 class="specialist-name">Мушкетова Вероніка Дмитрівна</h3>
+                        <p class="specialist-title">Лікар-стоматолог ортодонт.</p>
+                    </div>
+                </div>
+
+                <div class="specialist-card reveal">
+                    <img src="static/img/doctors/10.jpg" alt="Губернатор Катерина Юріївна" class="specialist-photo"
+                        loading="lazy">
+                    <div class="specialist-info">
+                        <h3 class="specialist-name">Губернатор Катерина Юріївна</h3>
+                        <p class="specialist-title">Лікар-стоматолог терапевт.</p>
+                    </div>
+                </div>
+
+                <div class="specialist-card reveal">
+                    <img src="static/img/doctors/11.jpg" alt="Скліфасовська Ганна Миколаївна" class="specialist-photo"
+                        loading="lazy">
+                    <div class="specialist-info">
+                        <h3 class="specialist-name">Скліфасовська Ганна Миколаївна</h3>
+                        <p class="specialist-title">Лікар-стоматолог гігієніст.</p>
+                    </div>
+                </div>
+
+                <div class="specialist-card reveal">
+                    <img src="static/img/doctors/9.jpg" alt="Кацарська Юлія Ігорівна" class="specialist-photo"
+                        loading="lazy">
+                    <div class="specialist-info">
+                        <h3 class="specialist-name">Кацарська Юлія Ігорівна</h3>
+                        <p class="specialist-title">Лікар-стоматолог.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         REVIEWS SECTION
+         ============================ -->
+    <section class="section reviews-section" id="reviews">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <p class="section-label">Відгуки пацієнтів</p>
+                <h2 class="section-title">Про що говорять наші пацієнти</h2>
+                <p class="section-subtitle">Щирі історії людей, які вже довірили нам свою посмішку</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card reveal">
+                    <svg class="review-quote" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 8.89543 14.017 10V13H11.017V10C11.017 7.23858 13.2556 5 16.017 5H19.017C21.7784 5 24.017 7.23858 24.017 10V15C24.017 18.3137 21.3307 21 18.017 21H14.017ZM0 21L0 18C0 16.8954 0.89543 16 2 16H5C5.55228 16 6 15.5523 6 15V9C6 8.44772 5.55228 8 5 8H2C0.89543 8 0 8.89543 0 10V13H11.017V10C11.017 7.23858 13.2556 5 16.017 5H19.017C21.7784 5 24.017 7.23858 24.017 10V15C24.017 18.3137 21.3307 21 18.017 21H14.017Z" />
+                    </svg>
+                    <p class="review-text">Хочу відмітити! У стоматології працюють професіонали своєї справи. Приходила
+                        на прийом із гострим болем, зробили все можливе. Отримала допомогу якісно та оперативно. Раджу!
+                    </p>
+                    <div class="review-author">
+                        <div class="author-info">
+                            <h4>Олена Воробій</h4>
+                            <span>12 червня 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card reveal">
+                    <svg class="review-quote" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 8.89543 14.017 10V13H11.017V10C11.017 7.23858 13.2556 5 16.017 5H19.017C21.7784 5 24.017 7.23858 24.017 10V15C24.017 18.3137 21.3307 21 18.017 21H14.017ZM0 21L0 18C0 16.8954 0.89543 16 2 16H5C5.55228 16 6 15.5523 6 15V9C6 8.44772 5.55228 8 5 8H2C0.89543 8 0 8.89543 0 10V13H11.017V10C11.017 7.23858 13.2556 5 16.017 5H19.017C21.7784 5 24.017 7.23858 24.017 10V15C24.017 18.3137 21.3307 21 18.017 21H14.017Z" />
+                    </svg>
+                    <p class="review-text">Дякую, що є такі уважні та компетентні лікарі! Все зробила у найкращому
+                        вигляді! Тепер звертаюсь тільки сюди! Рекомендую!</p>
+                    <div class="review-author">
+                        <div class="author-info">
+                            <h4>Наталія Довгоус</h4>
+                            <span>11 липня 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card reveal">
+                    <svg class="review-quote" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 8.89543 14.017 10V13H11.017V10C11.017 7.23858 13.2556 5 16.017 5H19.017C21.7784 5 24.017 7.23858 24.017 10V15C24.017 18.3137 21.3307 21 18.017 21H14.017ZM0 21L0 18C0 16.8954 0.89543 16 2 16H5C5.55228 16 6 15.5523 6 15V9C6 8.44772 5.55228 8 5 8H2C0.89543 8 0 8.89543 0 10V13H11.017V10C11.017 7.23858 13.2556 5 16.017 5H19.017C21.7784 5 24.017 7.23858 24.017 10V15C24.017 18.3137 21.3307 21 18.017 21H14.017Z" />
+                    </svg>
+                    <p class="review-text">Лікували дитині зуби, був карієс, пульпіт. Лікування пройшло добре.
+                        Вилікували за 1 сеанс. Лікар контактний з дитиною, підхід лояльний, м'який.</p>
+                    <div class="review-author">
+                        <div class="author-info">
+                            <h4>Євген Коваль</h4>
+                            <span>12 вересня 2022</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card reveal">
+                    <svg class="review-quote" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 8.89543 14.017 10V13H11.017V10C11.017 7.23858 13.2556 5 16.017 5H19.017C21.7784 5 24.017 7.23858 24.017 10V15C24.017 18.3137 21.3307 21 18.017 21H14.017ZM0 21L0 18C0 16.8954 0.89543 16 2 16H5C5.55228 16 6 15.5523 6 15V9C6 8.44772 5.55228 8 5 8H2C0.89543 8 0 8.89543 0 10V13H11.017V10C11.017 7.23858 13.2556 5 16.017 5H19.017C21.7784 5 24.017 7.23858 24.017 10V15C24.017 18.3137 21.3307 21 18.017 21H14.017Z" />
+                    </svg>
+                    <p class="review-text">Дуже вдячна клініці за професійний підхід! Робила імплантацію Straumann🇨🇭.
+                        Все пройшло безболісно, а результат просто неймовірний. Рекомендую всім!</p>
+                    <div class="review-author">
+                        <div class="author-info">
+                            <h4>Стелла Вервес</h4>
+                            <span>15 жовтня 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card reveal">
+                    <svg class="review-quote" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 8.89543 14.017 10V13H11.017V10C11.017 7.23858 13.2556 5 16.017 5H19.017C21.7784 5 24.017 7.23858 24.017 10V15C24.017 18.3137 21.3307 21 18.017 21H14.017ZM0 21L0 18C0 16.8954 0.89543 16 2 16H5C5.55228 16 6 15.5523 6 15V9C6 8.44772 5.55228 8 5 8H2C0.89543 8 0 8.89543 0 10V13H11.017V10C11.017 7.23858 13.2556 5 16.017 5H19.017C21.7784 5 24.017 7.23858 24.017 10V15C24.017 18.3137 21.3307 21 18.017 21H14.017Z" />
+                    </svg>
+                    <p class="review-text">Найкраща стоматологія в Одесі. Ставив тут 4 імплантати AnyRidge🇰🇷. Лікарі —
+                        справжні майстри своєї справи. Якісно, швидко і за адекватну ціну.</p>
+                    <div class="review-author">
+                        <div class="author-info">
+                            <h4>Павло К.</h4>
+                            <span>05 листопада 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card reveal">
+                    <svg class="review-quote" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 8.89543 14.017 10V13H11.017V10C11.017 7.23858 13.2556 5 16.017 5H19.017C21.7784 5 24.017 7.23858 24.017 10V15C24.017 18.3137 21.3307 21 18.017 21H14.017ZM0 21L0 18C0 16.8954 0.89543 16 2 16H5C5.55228 16 6 15.5523 6 15V9C6 8.44772 5.55228 8 5 8H2C0.89543 8 0 8.89543 0 10V13H11.017V10C11.017 7.23858 13.2556 5 16.017 5H19.017C21.7784 5 24.017 7.23858 24.017 10V15C24.017 18.3137 21.3307 21 18.017 21H14.017Z" />
+                    </svg>
+                    <p class="review-text">Приходила на консультацію по тотальному відновленню. Отримала розгорнуті
+                        відповіді на всі питання. Вже на етапі приживлення. Дуже задоволена сервісом.</p>
+                    <div class="review-author">
+                        <div class="author-info">
+                            <h4>Юлія М.</h4>
+                            <span>12 грудня 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         LOCATIONS SECTION
+         ============================ -->
+    <section class="section locations-section" id="locations">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <p class="section-label">Наші філії</p>
+                <h2 class="section-title">Чекаємо на вас в Одесі</h2>
+                <p class="section-subtitle">Оберіть найзручнішу для вас клініку та запишіться на прийом</p>
+            </div>
+
+            <div class="location-grid">
+                <div class="location-card reveal">
+                    <div class="location-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div class="location-addr">вул. Канатна, 81 корпус 3</div>
+                    <div class="location-meta">
+                        Одеса, Приморський район
+                        <span class="branch-phone">+38 (063) 617-15-55</span>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=MS+Dental+Clinic+Одеса+Канатна+81"
+                        target="_blank" class="location-link">Прокласти маршрут <svg width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+
+                <div class="location-card reveal">
+                    <div class="location-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div class="location-addr">вул. Осипова, 19</div>
+                    <div class="location-meta">
+                        Одеса, Центр міста
+                        <span class="branch-phone">+38 (093) 855-95-59</span>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=MS+Dental+Clinic+Одеса+Осипова+19"
+                        target="_blank" class="location-link">Прокласти маршрут <svg width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================
+         BOTTOM CTA SECTION
+         ============================ -->
+    <section class="section cta-bottom" id="cta-bottom">
+        <div class="section-container">
+            <div class="section-header">
+                <p class="section-label">Запис на прийом</p>
+                <h2 class="section-title">Запишіться на консультацію вже сьогодні</h2>
+                <p class="section-subtitle">Залиште заявку і ми зв'яжемося з вами протягом 30 хвилин у робочий час</p>
+            </div>
+
+            <div class="cta-card" id="cta-card-bottom">
+                <h2 class="cta-card-title">Зворотній дзвінок</h2>
+                <p class="cta-card-subtitle">Наші спеціалісти зв'яжуться з вами</p>
+
+                <form id="lead-form-bottom" novalidate>
+                    <div class="form-group">
+                        <label class="form-label" for="name-bottom">Ваше ім'я *</label>
+                        <input type="text" class="form-input" id="name-bottom" name="name"
+                            placeholder="Як до вас звертатися?" required autocomplete="name">
+                        <p class="form-error" id="name-error-bottom">Будь ласка, вкажіть ваше ім'я</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="tel-bottom">Номер телефону *</label>
+                        <input type="tel" class="form-input" id="tel-bottom" name="tel"
+                            placeholder="+380 (XX) XXX-XX-XX" required autocomplete="tel" inputmode="tel">
+                        <p class="form-error" id="tel-error-bottom">Вкажіть коректний номер телефону</p>
+                    </div>
+                    <button type="submit" class="btn-primary" id="submit-bottom">
+                        <span class="btn-text">Записатися на консультацію</span>
+                        <span class="spinner"></span>
+                    </button>
+                    <p class="form-privacy">Натискаючи кнопку, ви даєте згоду на обробку персональних даних</p>
+                </form>
+
+                <div class="form-success" id="success-bottom">
+                    <div class="form-success-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                        </svg>
+                    </div>
+                    <h3>Дякуємо за заявку!</h3>
+                    <p>Наші спеціалісти зв'яжуться з вами найближчим часом</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         FOOTER
+         ============================ -->
+    <footer class="lp-footer">
+        <div class="lp-footer-logo">
+            <img src="static/img/logo.svg" alt="MS Dental Clinic" width="36" height="45">
+            <span>MS Dental Clinic</span>
+        </div>
+        <div class="lp-footer-contacts">
+            <a href="tel:+380636171555">+38 063 617 15 55</a>
+            <a href="tel:+380938559559">+38 093 855 95 59</a>
+        </div>
+        <div class="lp-footer-addresses">
+            <p>вул. Канатна, 81 корпус 3, Одеса</p>
+            <p>вул. Осипова, 19, Одеса</p>
+        </div>
+        <p class="lp-footer-copy">&copy; 2026 MS Dental Clinic. Усі права захищені.</p>
+    </footer>
+
+    <!-- ============================
+         FLOATING CTA (Mobile)
+         ============================ -->
+    <div class="floating-cta" id="floating-cta">
+        <button class="floating-cta-btn" id="floating-cta-btn">Записатися на консультацію</button>
+    </div>
+
+    <!-- Floating Pulse Badge -->
+    <div class="float-badge">
+        <div class="badge-tooltip">Потрібна допомога?</div>
+        <div class="badge-btn" id="badge-pulsar">
+            <svg viewBox="0 0 24 24">
+                <path
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- ============================
+         MODALS
+         ============================ -->
+
+    <!-- 12s Timed Popup -->
+    <div class="modal-overlay" id="popup-promo">
+        <div class="modal-content-wrap">
+            <div class="modal-close" data-close-modal>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </div>
+            <div class="modal-header-img">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                </svg>
+                <div class="modal-header-text">
+                    <h2>Запис на консультацію</h2>
+                    <p>Залиште заявку та отримайте 3D-діагностику в подарунок!</p>
+                </div>
+            </div>
+            <div class="modal-body-p">
+                <form id="lead-form-popup" novalidate>
+                    <div class="form-group">
+                        <label class="form-label">Ваше ім'я</label>
+                        <input type="text" class="form-input" name="name" placeholder="Олександр" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Номер телефону</label>
+                        <input type="tel" class="form-input" name="tel" placeholder="+380 (XX) XXX-XX-XX" required>
+                    </div>
+                    <button type="submit" class="btn-primary" id="submit-popup">
+                        <span class="btn-text">Надіслати запит</span>
+                        <span class="spinner"></span>
+                    </button>
+                </form>
+                <div class="form-success" id="success-popup">
+                    <div class="form-success-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                        </svg>
+                    </div>
+                    <h3>Надіслано!</h3>
+                    <p>Ми зателефонуємо вам найближчим часом.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating CTA Modal -->
+    <div class="modal-overlay" id="modal-cta-choice">
+        <div class="modal-content-wrap">
+            <div class="modal-close" data-close-modal>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </div>
+            <div class="modal-body-p" style="text-align: center;">
+                <h3 style="font-family: var(--font-display); font-weight: 800; font-size: 20px; margin-bottom: 24px;">
+                    Оберіть зручний спосіб зв'язку</h3>
+
+                <div style="display: grid; gap: 16px;">
+                    <a href="tel:+380636171555" class="btn-primary" style="background: var(--brand-dark);">
+                        <span>Зателефонувати: 063 617 15 55</span>
+                    </a>
+                    <a href="tel:+380938559559" class="btn-primary" style="background: var(--brand-dark);">
+                        <span>Зателефонувати: 093 855 95 59</span>
+                    </a>
+                    <div style="height: 1px; background: #eee; margin: 8px 0;"></div>
+                    <button class="btn-primary" id="open-callback-from-cta">
+                        <span>Замовити зворотній дзвінок</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================
+         JAVASCRIPT
+         ============================ -->
+    <script>
+        (function () {
+            'use strict';
+
+            // ===== Phone Mask =====
+            function phoneMask(input) {
+                input.addEventListener('input', function (e) {
+                    let val = input.value.replace(/\D/g, '');
+
+                    // Handle +380 prefix
+                    if (val.startsWith('380')) {
+                        val = val.substring(3);
+                    } else if (val.startsWith('80')) {
+                        val = val.substring(2);
+                    } else if (val.startsWith('0')) {
+                        val = val.substring(1);
+                    }
+
+                    // Limit to 9 digits (UA mobile without prefix)
+                    val = val.substring(0, 9);
+
+                    // Format
+                    let formatted = '+380';
+                    if (val.length > 0) formatted += ' (' + val.substring(0, 2);
+                    if (val.length >= 2) formatted += ') ';
+                    if (val.length > 2) formatted += val.substring(2, 5);
+                    if (val.length > 5) formatted += '-' + val.substring(5, 7);
+                    if (val.length > 7) formatted += '-' + val.substring(7, 9);
+
+                    input.value = formatted;
+                });
+
+                input.addEventListener('focus', function () {
+                    if (!input.value) {
+                        input.value = '+380 ';
+                    }
+                });
+
+                input.addEventListener('keydown', function (e) {
+                    // Allow backspace, delete, arrows, tab
+                    var allowedKeys = [8, 46, 37, 39, 9, 36, 35];
+                    if (allowedKeys.indexOf(e.keyCode) !== -1) return;
+
+                    // Allow Ctrl+A, Ctrl+C, Ctrl+V, Ctrl+X
+                    if (e.ctrlKey || e.metaKey) return;
+
+                    // Block non-digit keys
+                    if (e.key && e.key.length === 1 && !/\d/.test(e.key)) {
+                        e.preventDefault();
+                    }
+                });
+            }
+
+            // Apply phone mask to all tel inputs
+            document.querySelectorAll('input[type="tel"]').forEach(phoneMask);
+
+            // ===== Form Validation & Submission =====
+            // Forms are handled by telegram-forms.js
+            
+            // Initialize all forms with Telegram
+            document.addEventListener('DOMContentLoaded', function() {
+                handleFormSubmit('lead-form-top', 'success-top', 'name-error-top', 'tel-error-top', 'submit-top', 'Implant Landing - Top Form');
+                handleFormSubmit('lead-form-bottom', 'success-bottom', 'name-error-bottom', 'tel-error-bottom', 'submit-bottom', 'Implant Landing - Bottom Form');
+                handleFormSubmit('lead-form-popup', 'success-popup', '', '', 'submit-popup', 'Implant Landing - Popup Form');
+            });
+
+            // ===== Modals Logic =====
+            function openModal(id) {
+                var modal = document.getElementById(id);
+                if (!modal) return;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            // Global trigger for header buttons
+            window.openContactForm = function () {
+                openModal('popup-promo');
+            };
+
+            function closeModal(id) {
+                var modal = document.getElementById(id);
+                if (!modal) return;
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            // Close on X or overlay click
+            document.querySelectorAll('.modal-overlay').forEach(function (overlay) {
+                overlay.addEventListener('click', function (e) {
+                    if (e.target === overlay || e.target.closest('[data-close-modal]')) {
+                        closeModal(overlay.id);
+                    }
+                });
+            });
+
+            // 12s Timed Popup
+            setTimeout(function () {
+                // Only show if no other modal is currently active
+                if (!document.querySelector('.modal-overlay.active')) {
+                    openModal('popup-promo');
+                }
+            }, 12000);
+
+            // Floating Badge Pulsar Action
+            var badgePulsar = document.getElementById('badge-pulsar');
+            if (badgePulsar) {
+                badgePulsar.addEventListener('click', function () {
+                    openModal('modal-cta-choice');
+                });
+            }
+
+            // CTA Modal Action
+            var openCallbackBtn = document.getElementById('open-callback-from-cta');
+            if (openCallbackBtn) {
+                openCallbackBtn.addEventListener('click', function () {
+                    closeModal('modal-cta-choice');
+                    // Open lead form modal immediately
+                    openModal('popup-promo');
+                });
+            }
+
+            // ===== Before/After Sliders =====
+
+            function initSliders() {
+                var sliders = document.querySelectorAll('[data-ba-slider]');
+
+                // IntersectionObserver for kinetic handle-shake hint
+                var handleObserver = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            var handle = entry.target.querySelector('.ba-handle');
+                            // Add shake class with slight delay for impact
+                            if (handle) {
+                                setTimeout(function () {
+                                    handle.classList.add('shake');
+                                    // Remove shake class after animation so it can re-trigger or stay clean
+                                    setTimeout(function () { handle.classList.remove('shake'); }, 2000);
+                                }, 500);
+                            }
+                            // Stop observing once peeked
+                            handleObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                sliders.forEach(function (slider) {
+                    var handle = slider.querySelector('.ba-handle');
+                    var afterImg = slider.querySelector('.ba-img.after');
+                    var hint = slider.querySelector('.ba-hint');
+                    var isDragging = false;
+
+                    handleObserver.observe(slider);
+
+                    function updateSlider(x) {
+                        var rect = slider.getBoundingClientRect();
+                        var position = ((x - rect.left) / rect.width) * 100;
+
+                        if (position < 0) position = 0;
+                        if (position > 100) position = 100;
+
+                        afterImg.style.width = position + '%';
+                        handle.style.left = position + '%';
+
+                        // Fade out hint on interaction
+                        if (hint && !hint.classList.contains('fade-out')) {
+                            hint.classList.add('fade-out');
+                        }
+                    }
+
+                    function startDragging(e) {
+                        isDragging = true;
+                        if (hint) hint.classList.add('fade-out');
+                        // Stop scrolling on mobile during drag
+                        if (e.type === 'touchstart') {
+                            // e.preventDefault(); // Handled in touchmove
+                        }
+                    }
+
+                    function stopDragging() {
+                        isDragging = false;
+                    }
+
+                    function onMove(e) {
+                        if (!isDragging) return;
+
+                        // Prevent page scroll when sliding on mobile
+                        if (e.type === 'touchmove') {
+                            if (e.cancelable) e.preventDefault();
+                        }
+
+                        var x = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+                        updateSlider(x);
+                    }
+
+                    // Handle events
+                    handle.addEventListener('mousedown', startDragging);
+                    handle.addEventListener('touchstart', startDragging, { passive: true });
+
+                    window.addEventListener('mousemove', onMove);
+                    window.addEventListener('touchmove', onMove, { passive: false });
+
+                    window.addEventListener('mouseup', stopDragging);
+                    window.addEventListener('touchend', stopDragging);
+
+                    // Set initial state
+                    afterImg.style.width = '50%';
+                    handle.style.left = '50%';
+                });
+            }
+
+            initSliders();
+
+            // ===== Scroll Reveal =====
+            function revealOnScroll() {
+                var elements = document.querySelectorAll('.reveal');
+                var windowHeight = window.innerHeight;
+
+                elements.forEach(function (el, index) {
+                    var elementTop = el.getBoundingClientRect().top;
+                    var revealPoint = windowHeight - 60;
+
+                    if (elementTop < revealPoint) {
+                        // Stagger USP cards if they are in the same grid
+                        if (el.classList.contains('usp-card')) {
+                            setTimeout(function () { el.classList.add('active'); }, index % 3 * 150);
+                        } else {
+                            el.classList.add('active');
+                        }
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', revealOnScroll, { passive: true });
+            revealOnScroll(); // Run on load
+
+            // ===== Floating CTA (Mobile) =====
+            var floatingCta = document.getElementById('floating-cta');
+            var heroSection = document.getElementById('hero');
+
+            function handleFloatingCta() {
+                if (window.innerWidth > 767) return;
+
+                var heroBottom = heroSection.getBoundingClientRect().bottom;
+                if (heroBottom < 0) {
+                    floatingCta.classList.add('visible');
+                } else {
+                    floatingCta.classList.remove('visible');
+                }
+            }
+
+            window.addEventListener('scroll', handleFloatingCta, { passive: true });
+
+            // Floating CTA click — scroll to bottom form
+            document.getElementById('floating-cta-btn').addEventListener('click', function () {
+                var target = document.getElementById('cta-bottom');
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+
+            // ===== Inline validation on blur =====
+            document.querySelectorAll('.form-input').forEach(function (input) {
+                input.addEventListener('blur', function () {
+                    if (input.name === 'name' && input.value && !validateName(input.value)) {
+                        input.classList.add('error');
+                        var errorEl = input.parentElement.querySelector('.form-error');
+                        if (errorEl) errorEl.classList.add('visible');
+                    }
+
+                    if (input.name === 'tel' && input.value && input.value !== '+380 ' && !validatePhone(input.value)) {
+                        input.classList.add('error');
+                        var errorEl = input.parentElement.querySelector('.form-error');
+                        if (errorEl) errorEl.classList.add('visible');
+                    }
+                });
+
+                input.addEventListener('input', function () {
+                    input.classList.remove('error');
+                    var errorEl = input.parentElement.querySelector('.form-error');
+                    if (errorEl) errorEl.classList.remove('visible');
+                });
+            });
+
+        })();
+    </script>
+
+</body>
+
+</html>

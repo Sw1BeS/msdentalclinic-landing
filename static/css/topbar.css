@@ -1,0 +1,21 @@
+.topbar {
+  color: #fff;
+}
+.topbar ul {
+  margin: 0;
+  padding: 0;
+}
+.topbar ul li {
+  list-style: none;
+}
+.topbar .social-media li {
+  margin: 0 0 0 15px;
+}
+.topbar a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.3s linear;
+}
+.topbar a:hover {
+  opacity: 0.7;
+}
