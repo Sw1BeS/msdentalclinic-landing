@@ -225,8 +225,10 @@ a {
 .hero-image-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 360px;
     height: 360px;
+    margin: 0 auto;
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid rgba(51, 247, 255, 0.2);
@@ -240,6 +242,17 @@ a {
     object-fit: cover;
     object-position: center 35%;
     transform: scale(1.6);
+}
+
+@media (max-width: 767px) {
+    .hero-image-container {
+        width: 280px;
+        height: 280px;
+    }
+
+    .hero-image {
+        transform: scale(2.2);
+    }
 }
 
 /* ========================================
@@ -1306,12 +1319,8 @@ a {
 
     .hero-image-container {
         order: 2;
-        justify-content: flex-end;
-    }
-
-    .hero-image {
-        width: 360px;
-        height: 360px;
+        margin-left: auto;
+        margin-right: 0;
     }
 
     .section {
@@ -1329,7 +1338,7 @@ a {
     }
 
 
-    .hero-image {
+    .hero-image-container {
         width: 420px;
         height: 420px;
     }
@@ -1342,11 +1351,6 @@ a {
 
     .hero-image-container {
         order: -1;
-    }
-
-    .hero-image {
-        width: 200px;
-        height: 200px;
     }
 
     .hero {
