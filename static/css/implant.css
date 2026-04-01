@@ -234,6 +234,7 @@ a {
     object-fit: cover;
     border: 4px solid rgba(51, 247, 255, 0.2);
     box-shadow: 0 0 60px rgba(51, 247, 255, 0.15);
+    transform: scale(1.2);
 }
 
 /* ========================================
