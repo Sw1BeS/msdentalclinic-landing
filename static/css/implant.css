@@ -1820,9 +1820,11 @@ h3 {
    SPECIAL OFFERS SLIDER SECTION
    ======================================== */
 .offers-section {
-    background: linear-gradient(135deg, #ffffff 0%, #f0f7fa 50%, #e8f4f8 100%);
-    padding: 100px 20px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 50%, #bae6fd 100%);
+    padding: 120px 20px;
     position: relative;
+    border-top: 1px solid rgba(59, 130, 246, 0.1);
+    border-bottom: 1px solid rgba(59, 130, 246, 0.1);
 }
 
 .offers-section::before {
@@ -1831,8 +1833,15 @@ h3 {
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--brand-accent), #33f7ff, var(--brand-accent));
+    height: 5px;
+    background: linear-gradient(90deg, #ef4444, #f59e0b, #10b981, #3b82f6, #8b5cf6, #ef4444);
+    background-size: 200% 100%;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
 }
 
 .offers-slider-container {
@@ -1845,24 +1854,26 @@ h3 {
 }
 
 .slider-nav {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
-    background: var(--white);
-    border: 2px solid rgba(0, 0, 0, 0.08);
+    background: linear-gradient(135deg, #ffffff, #f8fafc);
+    border: 3px solid rgba(59, 130, 246, 0.3);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
     flex-shrink: 0;
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
 }
 
 .slider-nav:hover {
     background: var(--brand-accent);
     border-color: var(--brand-accent);
     color: var(--white);
-    transform: scale(1.1);
+    transform: scale(1.15);
+    box-shadow: 0 8px 30px rgba(59, 130, 246, 0.4);
 }
 
 .slider-nav svg {
@@ -1895,15 +1906,15 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--white);
+    background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
     border-radius: var(--radius-lg);
-    box-shadow: 0 20px 60px rgba(26, 43, 51, 0.15), 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 25px 80px rgba(26, 43, 51, 0.2), 0 10px 30px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(59, 130, 246, 0.1) inset;
     opacity: 0;
     visibility: hidden;
     transform: translateX(50px);
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
-    border: 1px solid rgba(67, 156, 195, 0.1);
+    border: 2px solid rgba(59, 130, 246, 0.15);
 }
 
 .offer-card.active {
@@ -1944,54 +1955,39 @@ h3 {
 
 .offer-image {
     height: 240px;
-    background-size: cover;
-    background-position: center;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
 }
 
-/* Fallback background with real images for offers */
-.offer-card[data-offer="1"] .offer-image {
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.85) 0%, rgba(37, 99, 235, 0.9) 100%), url('static/img/landing/IMG_5458.JPG');
-    background-size: cover;
-    background-position: center;
+.offer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
 }
 
-.offer-card[data-offer="1"] .offer-image::after {
-    content: '🦷';
-    font-size: 80px;
-    opacity: 0.3;
+.offer-card:hover .offer-image img {
+    transform: scale(1.05);
 }
 
-.offer-card[data-offer="2"] .offer-image {
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.85) 0%, rgba(79, 70, 229, 0.9) 100%), url('static/img/landing/IMG_5460.JPG');
-    background-size: cover;
-    background-position: center;
-}
-
-.offer-card[data-offer="2"] .offer-image::after {
-    content: '💎';
-    font-size: 80px;
-    opacity: 0.3;
-}
-
-.offer-card[data-offer="3"] .offer-image {
-    background: linear-gradient(135deg, rgba(245, 158, 11, 0.85) 0%, rgba(217, 119, 6, 0.9) 100%), url('static/img/landing/IMG_5461.JPG');
-    background-size: cover;
-    background-position: center;
-}
-
-.offer-card[data-offer="3"] .offer-image::after {
-    content: '⚡';
-    font-size: 80px;
-    opacity: 0.3;
+.offer-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+    pointer-events: none;
 }
 
 .offer-overlay {
-    display: none; /* Removed - gradients now handle overlay effect */
+    display: none;
 }
 
 .offer-content {
@@ -2143,10 +2139,13 @@ h3 {
    QUIZ SECTION
    ======================================== */
 .quiz-section {
-    background: linear-gradient(135deg, #0f2027 0%, #1a2f38 50%, #203a43 100%);
-    padding: 100px 20px;
+    background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6f 30%, #3d5a80 70%, #4a6b8f 100%);
+    padding: 120px 20px;
     position: relative;
     overflow: hidden;
+    border-top: 3px solid #4a90d9;
+    border-bottom: 3px solid #4a90d9;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
 }
 
 .quiz-section::before {
@@ -2156,9 +2155,10 @@ h3 {
     right: -30%;
     width: 80vw;
     height: 80vw;
-    background: radial-gradient(circle, rgba(51, 247, 255, 0.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(74, 144, 217, 0.25) 0%, rgba(74, 144, 217, 0.05) 40%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
+    animation: pulse 4s ease-in-out infinite;
 }
 
 .quiz-section::after {
@@ -2168,22 +2168,42 @@ h3 {
     left: -20%;
     width: 60vw;
     height: 60vw;
-    background: radial-gradient(circle, rgba(67, 156, 195, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(100, 180, 255, 0.2) 0%, rgba(100, 180, 255, 0.05) 40%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
+    animation: pulse 5s ease-in-out infinite reverse;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.1); opacity: 0.8; }
 }
 
 .quiz-wrapper {
-    max-width: 850px;
+    max-width: 900px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
-    border-radius: var(--radius-lg);
-    padding: 56px 48px;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25), 0 10px 30px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 60px 48px;
+    box-shadow: 0 40px 120px rgba(0, 0, 0, 0.4), 0 20px 60px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
     position: relative;
     z-index: 10;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(74, 144, 217, 0.3);
+}
+
+.quiz-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #4a90d9, #6366f1, #4a90d9);
+    border-radius: 24px;
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(20px);
 }
 
 .quiz-header {
@@ -2192,36 +2212,45 @@ h3 {
 }
 
 .quiz-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 24px;
-    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 28px;
+    background: linear-gradient(135deg, #6366f1, #4f46e5, #8b5cf6);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4), 0 0 0 8px rgba(99, 102, 241, 0.1);
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
 }
 
 .quiz-icon svg {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     color: var(--white);
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
 }
 
 .quiz-title {
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: 28px;
+    font-size: 30px;
     color: var(--brand-dark);
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     line-height: 1.3;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .quiz-subtitle {
     color: var(--text-secondary);
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.6;
+    font-weight: 500;
 }
 
 .quiz-progress {
@@ -2296,43 +2325,47 @@ h3 {
 
 .quiz-options {
     display: grid;
-    gap: 16px;
+    gap: 18px;
 }
 
 .quiz-option {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 20px 24px;
-    background: var(--brand-bg);
-    border: 2px solid transparent;
+    gap: 18px;
+    padding: 24px 28px;
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    border: 2px solid #e2e8f0;
     border-radius: var(--radius-md);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: left;
     font-family: var(--font-body);
     font-size: 16px;
     color: var(--text-primary);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .quiz-option:hover {
-    background: #f0f9ff;
+    background: linear-gradient(135deg, #e0f2fe, #bae6fd);
     border-color: var(--brand-accent);
-    transform: translateX(8px);
+    transform: translateX(10px);
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.2);
 }
 
 .quiz-option.selected {
-    background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
     border-color: var(--brand-accent);
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
 }
 
 .option-icon {
-    font-size: 32px;
+    font-size: 36px;
     flex-shrink: 0;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 
 .option-text {
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.4;
 }
 
@@ -2371,36 +2404,58 @@ h3 {
 }
 
 .results-offer {
-    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
-    border: 2px solid #86efac;
-    border-radius: var(--radius-md);
-    padding: 24px;
-    margin-bottom: 24px;
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7, #bbf7d0);
+    border: 3px solid #22c55e;
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    margin-bottom: 28px;
+    box-shadow: 0 8px 30px rgba(34, 197, 94, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.results-offer::before {
+    content: '🎁';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 80px;
+    opacity: 0.15;
+    transform: rotate(15deg);
 }
 
 .offer-highlight {
     display: inline-block;
-    background: linear-gradient(135deg, #16a34a, #15803d);
+    background: linear-gradient(135deg, #22c55e, #16a34a, #15803d);
     color: var(--white);
-    padding: 12px 24px;
-    border-radius: var(--radius-md);
-    margin-bottom: 16px;
+    padding: 16px 32px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 20px;
+    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+    animation: pulseHighlight 2s ease-in-out infinite;
+}
+
+@keyframes pulseHighlight {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
 }
 
 .highlight-badge {
     display: block;
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    opacity: 0.9;
+    letter-spacing: 0.15em;
+    opacity: 0.95;
 }
 
 .highlight-percent {
     display: block;
-    font-size: 36px;
-    font-weight: 800;
+    font-size: 42px;
+    font-weight: 900;
     line-height: 1;
-    margin-top: 4px;
+    margin-top: 6px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 .results-list {
@@ -2420,55 +2475,81 @@ h3 {
 }
 
 .results-timer {
-    background: linear-gradient(135deg, #fef3c7, #fde68a);
-    border: 2px solid #fcd34d;
-    border-radius: var(--radius-md);
-    padding: 24px;
+    background: linear-gradient(135deg, #fef3c7, #fde68a, #fcd34d);
+    border: 3px solid #f59e0b;
+    border-radius: var(--radius-lg);
+    padding: 32px;
     margin-bottom: 32px;
+    box-shadow: 0 8px 30px rgba(245, 158, 11, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.results-timer::before {
+    content: '⏰';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    font-size: 100px;
+    opacity: 0.1;
+    animation: timerPulse 2s ease-in-out infinite;
+}
+
+@keyframes timerPulse {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.1) rotate(10deg); }
 }
 
 .timer-urgency {
-    font-weight: 700;
+    font-weight: 800;
     color: #92400e;
-    margin-bottom: 16px;
-    font-size: 16px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .countdown-special {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 .special-timer-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: var(--white);
-    padding: 12px 16px;
-    border-radius: var(--radius-sm);
-    min-width: 70px;
+    background: linear-gradient(135deg, #ffffff, #fffbeb);
+    padding: 14px 18px;
+    border-radius: var(--radius-md);
+    min-width: 76px;
+    border: 2px solid #f59e0b;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
 }
 
 .special-timer-value {
-    font-size: 28px;
-    font-weight: 800;
+    font-size: 32px;
+    font-weight: 900;
     color: #92400e;
     line-height: 1;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .special-timer-item small {
     font-size: 11px;
+    font-weight: 700;
     text-transform: uppercase;
-    color: var(--text-secondary);
+    color: #92400e;
     margin-top: 4px;
+    letter-spacing: 0.05em;
 }
 
 .special-timer-separator {
-    font-size: 24px;
-    font-weight: 700;
-    color: #92400e;
+    font-size: 28px;
+    font-weight: 800;
+    color: #f59e0b;
     padding-bottom: 8px;
 }
 
@@ -2527,7 +2608,7 @@ h3 {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .offers-section {
-        padding: 60px 15px;
+        padding: 80px 15px;
     }
 
     .offers-slider-container {
@@ -2536,13 +2617,13 @@ h3 {
     }
 
     .slider-nav {
-        width: 36px;
-        height: 36px;
+        width: 42px;
+        height: 42px;
     }
 
     .slider-nav svg {
-        width: 18px;
-        height: 18px;
+        width: 20px;
+        height: 20px;
     }
 
     .offer-card {
@@ -2550,26 +2631,26 @@ h3 {
     }
 
     .offer-image {
-        height: 160px;
+        height: 180px;
     }
 
     .offer-content {
-        padding: 20px;
+        padding: 24px 20px;
     }
 
     .offer-content h3 {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .offer-content > p {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .offer-price {
-        padding: 12px;
+        padding: 14px;
         flex-direction: column;
         align-items: flex-start;
-        gap: 4px;
+        gap: 6px;
     }
 
     .old-price {
@@ -2577,35 +2658,35 @@ h3 {
     }
 
     .new-price {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .offer-benefits li {
-        font-size: 13px;
-        padding: 6px 0;
+        font-size: 14px;
+        padding: 8px 0;
     }
 
     .offer-timer {
-        padding: 14px;
+        padding: 16px;
     }
 
     .timer-label {
-        font-size: 11px;
-        margin-bottom: 8px;
+        font-size: 12px;
+        margin-bottom: 10px;
     }
 
     .timer-display {
         flex-wrap: wrap;
-        gap: 4px;
+        gap: 6px;
     }
 
     .timer-item {
-        min-width: 42px;
-        padding: 5px 6px;
+        min-width: 48px;
+        padding: 6px 8px;
     }
 
     .timer-value {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .timer-item small {
@@ -2614,12 +2695,12 @@ h3 {
 
     .timer-separator {
         font-size: 16px;
-        padding-bottom: 4px;
+        padding-bottom: 6px;
     }
 
     .offer-btn {
-        padding: 14px 18px;
-        font-size: 14px;
+        padding: 16px 20px;
+        font-size: 15px;
     }
 
     .slider-dots {
@@ -2633,47 +2714,48 @@ h3 {
 
     /* Quiz Mobile */
     .quiz-section {
-        padding: 60px 15px;
+        padding: 80px 15px;
     }
 
     .quiz-wrapper {
-        padding: 32px 20px;
+        padding: 40px 24px;
+        border-radius: 20px;
     }
 
     .quiz-title {
-        font-size: 20px;
-    }
-
-    .quiz-subtitle {
-        font-size: 14px;
-    }
-
-    .quiz-question {
-        font-size: 18px;
-    }
-
-    .quiz-option {
-        padding: 14px 16px;
-        font-size: 13px;
-        gap: 12px;
-    }
-
-    .option-icon {
         font-size: 22px;
     }
 
+    .quiz-subtitle {
+        font-size: 15px;
+    }
+
+    .quiz-question {
+        font-size: 19px;
+    }
+
+    .quiz-option {
+        padding: 16px 18px;
+        font-size: 14px;
+        gap: 14px;
+    }
+
+    .option-icon {
+        font-size: 26px;
+    }
+
     .special-timer-item {
-        min-width: 48px;
-        padding: 8px 10px;
+        min-width: 52px;
+        padding: 10px 12px;
     }
 
     .special-timer-value {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .quiz-navigation {
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
     }
 
     .quiz-btn-prev,
@@ -2685,18 +2767,42 @@ h3 {
 /* Desktop optimization */
 @media (min-width: 1024px) {
     .offers-slider-container {
-        max-width: 1000px;
+        max-width: 1100px;
     }
 
     .offer-card {
-        border-radius: 16px;
+        border-radius: 20px;
     }
 
     .offer-image {
-        height: 260px;
+        height: 280px;
     }
 
     .quiz-wrapper {
-        padding: 64px 56px;
+        padding: 72px 64px;
+        max-width: 950px;
+    }
+
+    .section-header {
+        margin-bottom: 60px;
+    }
+
+    .section-title {
+        font-size: 42px;
+    }
+}
+
+/* Large desktop optimization */
+@media (min-width: 1440px) {
+    .offers-slider-container {
+        max-width: 1200px;
+    }
+
+    .offer-image {
+        height: 320px;
+    }
+
+    .quiz-wrapper {
+        padding: 80px 72px;
     }
 }
