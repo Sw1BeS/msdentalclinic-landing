@@ -1820,66 +1820,67 @@ h3 {
    SPECIAL OFFERS SLIDER SECTION
    ======================================== */
 .offers-section {
-    background: var(--brand-bg);
-    padding: 80px 20px;
+    background: #f0f7fa;
+    padding: 100px 20px;
     position: relative;
-    border-top: 1px solid rgba(59, 130, 246, 0.08);
-    border-bottom: 1px solid rgba(59, 130, 246, 0.08);
+    border-top: 1px solid rgba(67, 156, 195, 0.15);
+    border-bottom: 1px solid rgba(67, 156, 195, 0.15);
 }
 
 .offers-slider-container {
     position: relative;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
 }
 
 .slider-nav {
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     background: var(--white);
-    border: 2px solid rgba(67, 156, 195, 0.2);
+    border: 2px solid rgba(67, 156, 195, 0.3);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
     flex-shrink: 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    color: var(--brand-accent);
 }
 
 .slider-nav:hover {
     background: var(--brand-accent);
     border-color: var(--brand-accent);
     color: var(--white);
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(67, 156, 195, 0.25);
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px rgba(67, 156, 195, 0.3);
 }
 
 .slider-nav svg {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
 }
 
 .offers-slider-track {
     position: relative;
     width: 100%;
     overflow: hidden;
-    min-height: 480px;
+    min-height: 520px;
 }
 
 @media (min-width: 768px) {
     .offers-slider-track {
-        min-height: 520px;
+        min-height: 580px;
     }
 }
 
 @media (min-width: 1024px) {
     .offers-slider-track {
-        min-height: 560px;
+        min-height: 620px;
     }
 }
 
@@ -1891,13 +1892,13 @@ h3 {
     height: 100%;
     background: var(--white);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-soft), 0 0 0 1px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(67, 156, 195, 0.12);
     opacity: 0;
     visibility: hidden;
     transform: translateX(50px);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
-    border: 1px solid rgba(67, 156, 195, 0.1);
+    border: 1px solid rgba(67, 156, 195, 0.15);
 }
 
 .offer-card.active {
@@ -1912,49 +1913,49 @@ h3 {
 
 .offer-badge {
     position: absolute;
-    top: 16px;
-    left: 16px;
+    top: 20px;
+    left: 20px;
     background: linear-gradient(135deg, #ef4444, #dc2626);
     color: var(--white);
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-weight: 600;
-    font-size: 12px;
+    padding: 8px 16px;
+    border-radius: 24px;
+    font-weight: 700;
+    font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     z-index: 10;
-    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+    box-shadow: 0 4px 16px rgba(239, 68, 68, 0.35);
 }
 
 .offer-badge.special {
     background: linear-gradient(135deg, #6366f1, #4f46e5);
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.35);
 }
 
 .offer-badge.mega {
     background: linear-gradient(135deg, #f59e0b, #d97706);
-    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+    box-shadow: 0 4px 18px rgba(245, 158, 11, 0.4);
 }
 
 .offer-image {
-    height: 220px;
+    height: 240px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: #f8fafc;
+    background: #f1f5f9;
 }
 
 .offer-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    transition: transform 0.5s ease;
 }
 
 .offer-card:hover .offer-image img {
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
 .offer-image::after {
@@ -2121,10 +2122,12 @@ h3 {
    QUIZ SECTION
    ======================================== */
 .quiz-section {
-    background: var(--brand-bg);
-    padding: 80px 20px;
+    background: #f0f7fa;
+    padding: 100px 20px;
     position: relative;
     overflow: hidden;
+    border-top: 1px solid rgba(67, 156, 195, 0.15);
+    border-bottom: 1px solid rgba(67, 156, 195, 0.15);
 }
 
 .quiz-wrapper {
@@ -2133,10 +2136,10 @@ h3 {
     background: var(--white);
     border-radius: var(--radius-lg);
     padding: 48px 32px;
-    box-shadow: var(--shadow-soft), 0 0 0 1px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(67, 156, 195, 0.12);
     position: relative;
     z-index: 10;
-    border: 1px solid rgba(67, 156, 195, 0.1);
+    border: 1px solid rgba(67, 156, 195, 0.15);
 }
 
 .quiz-header {
@@ -2465,10 +2468,52 @@ h3 {
     text-align: left;
 }
 
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: var(--radius-md);
+    font-size: 15px;
+    font-family: var(--font-body);
+    color: var(--text-primary);
+    background: var(--white);
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--brand-accent);
+    box-shadow: 0 0 0 3px rgba(67, 156, 195, 0.15);
+}
+
+.form-input::placeholder {
+    color: #94a3b8;
+}
+
 .btn-large {
     padding: 18px 32px;
     font-size: 18px;
     font-weight: 700;
+}
+
+.form-privacy {
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-top: 16px;
+    line-height: 1.4;
 }
 
 .quiz-navigation {
@@ -2514,26 +2559,26 @@ h3 {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .offers-section {
-        padding: 80px 15px;
+        padding: 60px 15px;
     }
 
     .offers-slider-container {
         gap: 12px;
-        padding: 0 10px;
+        padding: 0 5px;
     }
 
     .slider-nav {
-        width: 42px;
-        height: 42px;
+        width: 40px;
+        height: 40px;
     }
 
     .slider-nav svg {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
     }
 
     .offers-slider-track {
-        min-height: 420px;
+        min-height: 460px;
     }
 
     .offer-card {
@@ -2541,7 +2586,7 @@ h3 {
     }
 
     .offer-image {
-        height: 160px;
+        height: 180px;
     }
 
     .offer-content {
@@ -2628,7 +2673,7 @@ h3 {
     }
 
     .quiz-wrapper {
-        padding: 32px 20px;
+        padding: 28px 18px;
         border-radius: var(--radius-lg);
     }
 
@@ -2641,7 +2686,7 @@ h3 {
     }
 
     .quiz-question {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .quiz-option {
@@ -2655,12 +2700,12 @@ h3 {
     }
 
     .special-timer-item {
-        min-width: 48px;
+        min-width: 55px;
         padding: 8px 10px;
     }
 
     .special-timer-value {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .quiz-navigation {
@@ -2672,16 +2717,26 @@ h3 {
     .quiz-btn-next {
         width: 100%;
     }
+
+    .form-input {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .btn-large {
+        padding: 16px 24px;
+        font-size: 16px;
+    }
 }
 
 /* Desktop optimization */
 @media (min-width: 1024px) {
     .offers-slider-container {
-        max-width: 1100px;
+        max-width: 1200px;
     }
 
     .offers-slider-track {
-        min-height: 560px;
+        min-height: 620px;
     }
 
     .offer-card {
@@ -2689,7 +2744,7 @@ h3 {
     }
 
     .offer-image {
-        height: 260px;
+        height: 280px;
     }
 
     .offer-content h3 {
@@ -2713,11 +2768,15 @@ h3 {
 /* Large desktop optimization */
 @media (min-width: 1440px) {
     .offers-slider-container {
-        max-width: 1200px;
+        max-width: 1300px;
     }
 
     .offer-image {
         height: 320px;
+    }
+
+    .offers-slider-track {
+        min-height: 660px;
     }
 
     .quiz-wrapper {
