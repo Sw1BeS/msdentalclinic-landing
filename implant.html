@@ -205,6 +205,299 @@
     </section>
 
     <!-- ============================
+         SPECIAL OFFERS SLIDER
+         ============================ -->
+    <section class="offers-section" id="offers">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <p class="section-label">Гарячі пропозиції</p>
+                <h2 class="section-title">Обмежені пропозиції цього місяця</h2>
+                <p class="section-subtitle">Встигніть скористатися спеціальними умовами до кінця акції</p>
+            </div>
+
+            <div class="offers-slider-container reveal">
+                <button class="slider-nav prev" id="offer-prev" aria-label="Попередній оффер">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </button>
+
+                <div class="offers-slider-track" id="offers-track">
+                    <!-- Offer 1: Free Consultation with Countdown -->
+                    <div class="offer-card active" data-offer="1">
+                        <div class="offer-badge">🔥 ХІТ</div>
+                        <div class="offer-image">
+                            <img src="static/img/landing/IMG_5458.JPG" alt="Безкоштовна консультація" loading="lazy">
+                        </div>
+                        <div class="offer-content">
+                            <h3>Безкоштовна консультація імплантолога</h3>
+                            <p>Повний огляд, 3D-діагностика та план лікування безкоштовно при запису до кінця тижня</p>
+                            <div class="offer-price">
+                                <span class="old-price">2 500 ₴</span>
+                                <span class="new-price">0 ₴</span>
+                            </div>
+                            <div class="offer-timer" id="consultation-timer">
+                                <div class="timer-label">До завершення акції:</div>
+                                <div class="timer-display">
+                                    <span class="timer-item"><span class="timer-value" id="consult-days">00</span><small>днів</small></span>
+                                    <span class="timer-separator">:</span>
+                                    <span class="timer-item"><span class="timer-value" id="consult-hours">00</span><small>год</small></span>
+                                    <span class="timer-separator">:</span>
+                                    <span class="timer-item"><span class="timer-value" id="consult-minutes">00</span><small>хв</small></span>
+                                    <span class="timer-separator">:</span>
+                                    <span class="timer-item"><span class="timer-value" id="consult-seconds">00</span><small>сек</small></span>
+                                </div>
+                            </div>
+                            <button class="btn-primary offer-btn" onclick="openContactForm()">Забронювати місце</button>
+                        </div>
+                    </div>
+
+                    <!-- Offer 2: Straumann Premium -->
+                    <div class="offer-card" data-offer="2">
+                        <div class="offer-badge special">💎 ПРЕМІУМ</div>
+                        <div class="offer-image">
+                            <img src="static/img/landing/IMG_5460.JPG" alt="Straumann імплантація" loading="lazy">
+                        </div>
+                        <div class="offer-content">
+                            <h3>Імплантація Straumann зі знижкою 15%</h3>
+                            <p>Швейцарська якість за спеціальною ціною. Тимчасова конструкція у подарунок</p>
+                            <div class="offer-price">
+                                <span class="old-price">від 25 000 ₴</span>
+                                <span class="new-price">від 21 250 ₴</span>
+                            </div>
+                            <ul class="offer-benefits">
+                                <li>✓ Пожиттєва гарантія</li>
+                                <li>✓ Приживлення 98.8%</li>
+                                <li>✓ Тимчасовий зуб за 7 днів</li>
+                            </ul>
+                            <button class="btn-primary offer-btn" onclick="openContactForm()">Отримати знижку</button>
+                        </div>
+                    </div>
+
+                    <!-- Offer 3: All-on-6 -->
+                    <div class="offer-card" data-offer="3">
+                        <div class="offer-badge mega">⚡ ALL-ON-6</div>
+                        <div class="offer-image">
+                            <img src="static/img/landing/IMG_5461.JPG" alt="All-on-6 реабілітація" loading="lazy">
+                        </div>
+                        <div class="offer-content">
+                            <h3>Тотальна реабілітація All-on-6</h3>
+                            <p>Повне відновлення щелепи за 1 день. Фіксована ціна під ключ</p>
+                            <div class="offer-price">
+                                <span class="old-price">180 000 ₴</span>
+                                <span class="new-price">149 000 ₴</span>
+                            </div>
+                            <ul class="offer-benefits">
+                                <li>✓ 6 імплантатів Megagen</li>
+                                <li>✓ Тимчасовий протез включено</li>
+                                <li>✓ Гарантія 5 років</li>
+                            </ul>
+                            <button class="btn-primary offer-btn" onclick="openContactForm()">Дізнатися деталі</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="slider-nav next" id="offer-next" aria-label="Наступний оффер">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </button>
+
+                <div class="slider-dots" id="offer-dots">
+                    <button class="dot active" data-dot="1"></button>
+                    <button class="dot" data-dot="2"></button>
+                    <button class="dot" data-dot="3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
+         QUIZ SECTION
+         ============================ -->
+    <section class="quiz-section" id="quiz">
+        <div class="section-container">
+            <div class="quiz-wrapper reveal">
+                <div class="quiz-header">
+                    <div class="quiz-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+                        </svg>
+                    </div>
+                    <h2 class="quiz-title">Пройдіть тест та виграйте безкоштовну консультацію!</h2>
+                    <p class="quiz-subtitle">Відповідьте на 5 питань та отримайте персональну пропозицію зі знижкою до 20%</p>
+                </div>
+
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="quiz-progress-fill" style="width: 0%;"></div>
+                    </div>
+                    <span class="progress-text"><span id="quiz-current-step">0</span> з <span id="quiz-total-steps">5</span></span>
+                </div>
+
+                <div class="quiz-content" id="quiz-content">
+                    <!-- Step 1 -->
+                    <div class="quiz-step active" data-step="1">
+                        <h3 class="quiz-question">Яка ваша основна мета?</h3>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-answer="1a">
+                                <span class="option-icon">🦷</span>
+                                <span class="option-text">Відновити один або кілька зубів</span>
+                            </button>
+                            <button class="quiz-option" data-answer="1b">
+                                <span class="option-icon">😁</span>
+                                <span class="option-text">Повністю відновити посмішку</span>
+                            </button>
+                            <button class="quiz-option" data-answer="1c">
+                                <span class="option-icon">💰</span>
+                                <span class="option-text">Дізнатися вартість імплантації</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="quiz-step" data-step="2">
+                        <h3 class="quiz-question">Який термін відсутності зубів?</h3>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-answer="2a">
+                                <span class="option-icon">⏱️</span>
+                                <span class="option-text">Менше 6 місяців</span>
+                            </button>
+                            <button class="quiz-option" data-answer="2b">
+                                <span class="option-icon">📅</span>
+                                <span class="option-text">Від 6 місяців до 2 років</span>
+                            </button>
+                            <button class="quiz-option" data-answer="2c">
+                                <span class="option-icon">🗓️</span>
+                                <span class="option-text">Більше 2 років</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="quiz-step" data-step="3">
+                        <h3 class="quiz-question">Який бюджет ви розглядаєте?</h3>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-answer="3a">
+                                <span class="option-icon">💵</span>
+                                <span class="option-text">Економ варіант (до 15 000 ₴ за зуб)</span>
+                            </button>
+                            <button class="quiz-option" data-answer="3b">
+                                <span class="option-icon">💰</span>
+                                <span class="option-text">Середній (15 000 - 25 000 ₴ за зуб)</span>
+                            </button>
+                            <button class="quiz-option" data-answer="3c">
+                                <span class="option-icon">💎</span>
+                                <span class="option-text">Преміум (від 25 000 ₴ за зуб)</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="quiz-step" data-step="4">
+                        <h3 class="quiz-question">Чи є у вас протипоказання?</h3>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-answer="4a">
+                                <span class="option-icon">✅</span>
+                                <span class="option-text">Ні, я здоровий(а)</span>
+                            </button>
+                            <button class="quiz-option" data-answer="4b">
+                                <span class="option-icon">⚠️</span>
+                                <span class="option-text">Є хронічні захворювання</span>
+                            </button>
+                            <button class="quiz-option" data-answer="4c">
+                                <span class="option-icon">❓</span>
+                                <span class="option-text">Не впевнений(а)</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="quiz-step" data-step="5">
+                        <h3 class="quiz-question">Коли ви готові розпочати лікування?</h3>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-answer="5a">
+                                <span class="option-icon">🚀</span>
+                                <span class="option-text">Якнайшвидше (цього тижня)</span>
+                            </button>
+                            <button class="quiz-option" data-answer="5b">
+                                <span class="option-icon">📆</span>
+                                <span class="option-text">Протягом місяця</span>
+                            </button>
+                            <button class="quiz-option" data-answer="5c">
+                                <span class="option-icon">🕐</span>
+                                <span class="option-text">Поки тільки дізнаюся інформацію</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Final Step - Results -->
+                    <div class="quiz-step quiz-results" data-step="results">
+                        <div class="results-header">
+                            <div class="results-icon">🎉</div>
+                            <h3>Вітаємо! Ви виграли безкоштовну консультацію!</h3>
+                        </div>
+                        <div class="results-content">
+                            <p>На основі ваших відповідей ми підготували персональну пропозицію:</p>
+                            <div class="results-offer">
+                                <div class="offer-highlight">
+                                    <span class="highlight-badge">ВАША ЗНИЖКА</span>
+                                    <span class="highlight-percent">до 20%</span>
+                                </div>
+                                <ul class="results-list">
+                                    <li>✓ Безкоштовна 3D-діагностика</li>
+                                    <li>✓ Консультація імплантолога</li>
+                                    <li>✓ Індивідуальний план лікування</li>
+                                    <li>✓ Фіксована ціна на послуги</li>
+                                </ul>
+                            </div>
+                            <div class="results-timer">
+                                <p class="timer-urgency">⏰ Пропозиція дійсна протягом 48 годин!</p>
+                                <div class="countdown-special">
+                                    <span class="special-timer-item"><span class="special-timer-value" id="quiz-offer-hours">48</span><small>год</small></span>
+                                    <span class="special-timer-separator">:</span>
+                                    <span class="special-timer-item"><span class="special-timer-value" id="quiz-offer-minutes">00</span><small>хв</small></span>
+                                    <span class="special-timer-separator">:</span>
+                                    <span class="special-timer-item"><span class="special-timer-value" id="quiz-offer-seconds">00</span><small>сек</small></span>
+                                </div>
+                            </div>
+                            <form class="quiz-lead-form" id="quiz-lead-form" novalidate>
+                                <div class="form-group">
+                                    <label class="form-label" for="quiz-name">Ваше ім'я *</label>
+                                    <input type="text" class="form-input" id="quiz-name" name="name" placeholder="Олександр" required autocomplete="name">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="quiz-tel">Номер телефону *</label>
+                                    <input type="tel" class="form-input" id="quiz-tel" name="tel" placeholder="+380 (XX) XXX-XX-XX" required autocomplete="tel" inputmode="tel">
+                                </div>
+                                <button type="submit" class="btn-primary btn-large" id="quiz-submit">
+                                    <span class="btn-text">Отримати пропозицію</span>
+                                    <span class="spinner"></span>
+                                </button>
+                                <p class="form-privacy">Натискаючи кнопку, ви даєте згоду на обробку персональних даних</p>
+                            </form>
+                            <div class="form-success" id="quiz-success">
+                                <div class="form-success-icon">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                    </svg>
+                                </div>
+                                <h3>Вітаємо! Ваша заявка прийнята</h3>
+                                <p>Наш менеджер зв'яжеться з вами протягом 30 хвилин для підтвердження запису</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quiz-navigation">
+                    <button class="quiz-btn-prev" id="quiz-prev" disabled>← Назад</button>
+                    <button class="quiz-btn-next" id="quiz-next">Далі →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================
          BRANDS STRIP
          ============================ -->
     <div class="brands-strip reveal">
@@ -1099,6 +1392,279 @@
                     if (errorEl) errorEl.classList.remove('visible');
                 });
             });
+
+            // ===== Special Offers Slider =====
+            (function initOffersSlider() {
+                var track = document.getElementById('offers-track');
+                var prevBtn = document.getElementById('offer-prev');
+                var nextBtn = document.getElementById('offer-next');
+                var dots = document.querySelectorAll('.dot');
+                var cards = document.querySelectorAll('.offer-card');
+                var currentSlide = 0;
+                var totalSlides = cards.length;
+                var autoSlideInterval;
+
+                function showSlide(index) {
+                    cards.forEach(function (card, i) {
+                        card.classList.remove('active', 'prev');
+                        if (i === index) {
+                            card.classList.add('active');
+                        } else if (i < index) {
+                            card.classList.add('prev');
+                        }
+                    });
+
+                    dots.forEach(function (dot, i) {
+                        dot.classList.toggle('active', i === index);
+                    });
+
+                    currentSlide = index;
+                }
+
+                function nextSlide() {
+                    showSlide((currentSlide + 1) % totalSlides);
+                }
+
+                function prevSlide() {
+                    showSlide((currentSlide - 1 + totalSlides) % totalSlides);
+                }
+
+                function startAutoSlide() {
+                    autoSlideInterval = setInterval(nextSlide, 5000);
+                }
+
+                function stopAutoSlide() {
+                    if (autoSlideInterval) clearInterval(autoSlideInterval);
+                }
+
+                if (prevBtn && nextBtn) {
+                    prevBtn.addEventListener('click', function () {
+                        prevSlide(); stopAutoSlide(); startAutoSlide();
+                    });
+                    nextBtn.addEventListener('click', function () {
+                        nextSlide(); stopAutoSlide(); startAutoSlide();
+                    });
+                }
+
+                dots.forEach(function (dot, index) {
+                    dot.addEventListener('click', function () {
+                        showSlide(index); stopAutoSlide(); startAutoSlide();
+                    });
+                });
+
+                // Touch support
+                var touchStartX = 0;
+                if (track) {
+                    track.addEventListener('touchstart', function (e) {
+                        touchStartX = e.changedTouches[0].screenX;
+                    }, { passive: true });
+                    track.addEventListener('touchend', function (e) {
+                        var diff = touchStartX - e.changedTouches[0].screenX;
+                        if (Math.abs(diff) > 50) {
+                            diff > 0 ? nextSlide() : prevSlide();
+                            stopAutoSlide(); startAutoSlide();
+                        }
+                    }, { passive: true });
+                }
+
+                showSlide(0);
+                startAutoSlide();
+            })();
+
+            // ===== Quiz =====
+            (function initQuiz() {
+                var quizSteps = document.querySelectorAll('.quiz-step');
+                var progressFill = document.getElementById('quiz-progress-fill');
+                var currentStepEl = document.getElementById('quiz-current-step');
+                var totalStepsEl = document.getElementById('quiz-total-steps');
+                var prevBtn = document.getElementById('quiz-prev');
+                var nextBtn = document.getElementById('quiz-next');
+                var currentStep = 0;
+                var totalSteps = quizSteps.length - 1; // Exclude results
+                var answers = {};
+
+                function updateProgress() {
+                    progressFill.style.width = ((currentStep) / totalSteps) * 100 + '%';
+                    currentStepEl.textContent = currentStep;
+                    totalStepsEl.textContent = totalSteps;
+                }
+
+                function showStep(index) {
+                    quizSteps.forEach(function (step) {
+                        step.style.display = 'none';
+                        step.classList.remove('active');
+                    });
+
+                    if (index < totalSteps) {
+                        quizSteps[index].style.display = 'block';
+                        quizSteps[index].classList.add('active');
+                    }
+
+                    if (prevBtn) prevBtn.disabled = index === 0;
+                    updateProgress();
+                }
+
+                function nextStep() {
+                    if (currentStep < totalSteps - 1) {
+                        currentStep++;
+                        showStep(currentStep);
+                    } else {
+                        showResults();
+                    }
+                }
+
+                function prevStep() {
+                    if (currentStep > 0) {
+                        currentStep--;
+                        showStep(currentStep);
+                    }
+                }
+
+                function showResults() {
+                    quizSteps.forEach(function (step) {
+                        step.style.display = 'none';
+                        step.classList.remove('active');
+                    });
+
+                    var resultsStep = document.querySelector('.quiz-results');
+                    if (resultsStep) {
+                        resultsStep.style.display = 'block';
+                        resultsStep.classList.add('active');
+                    }
+
+                    // Hide navigation
+                    var nav = document.querySelector('.quiz-navigation');
+                    if (nav) nav.style.display = 'none';
+
+                    // Hide progress
+                    var progress = document.querySelector('.quiz-progress');
+                    if (progress) progress.style.display = 'none';
+
+                    startQuizOfferCountdown();
+                }
+
+                // Option click = auto-advance
+                document.querySelectorAll('.quiz-option').forEach(function (option) {
+                    option.addEventListener('click', function () {
+                        var siblings = this.parentElement.querySelectorAll('.quiz-option');
+                        siblings.forEach(function (sib) { sib.classList.remove('selected'); });
+                        this.classList.add('selected');
+
+                        var stepNum = this.closest('.quiz-step').getAttribute('data-step');
+                        answers[stepNum] = this.getAttribute('data-answer');
+
+                        setTimeout(nextStep, 400);
+                    });
+                });
+
+                if (prevBtn) prevBtn.addEventListener('click', prevStep);
+                if (nextBtn) nextBtn.addEventListener('click', nextStep);
+
+                updateProgress();
+                showStep(0);
+
+                // Quiz offer countdown (48h)
+                function startQuizOfferCountdown() {
+                    var storageKey = 'quizOfferDeadline';
+                    var deadline = localStorage.getItem(storageKey);
+
+                    if (!deadline) {
+                        var now = new Date();
+                        now.setHours(now.getHours() + 48);
+                        deadline = now.getTime();
+                        localStorage.setItem(storageKey, deadline);
+                    }
+
+                    function updateTimer() {
+                        var now = new Date().getTime();
+                        var distance = deadline - now;
+
+                        if (distance < 0) {
+                            var newNow = new Date();
+                            newNow.setHours(newNow.getHours() + 48);
+                            deadline = newNow.getTime();
+                            localStorage.setItem(storageKey, deadline);
+                            distance = deadline - now;
+                        }
+
+                        var hours = Math.floor(distance / (1000 * 60 * 60));
+                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                        var h = document.getElementById('quiz-offer-hours');
+                        var m = document.getElementById('quiz-offer-minutes');
+                        var s = document.getElementById('quiz-offer-seconds');
+
+                        if (h) h.textContent = String(hours).padStart(2, '0');
+                        if (m) m.textContent = String(minutes).padStart(2, '0');
+                        if (s) s.textContent = String(seconds).padStart(2, '0');
+                    }
+
+                    updateTimer();
+                    setInterval(updateTimer, 1000);
+                }
+
+                // Quiz form submission via Telegram
+                document.addEventListener('DOMContentLoaded', function () {
+                    if (typeof handleFormSubmit === 'function') {
+                        handleFormSubmit('quiz-lead-form', 'quiz-success', '', '', 'quiz-submit', 'Implant Landing - Quiz Form');
+                    }
+                });
+            })();
+
+            // ===== Consultation Countdown Timer =====
+            (function initConsultationCountdown() {
+                var storageKey = 'consultationDeadline';
+                var deadline = localStorage.getItem(storageKey);
+
+                if (!deadline) {
+                    var now = new Date();
+                    var daysUntilSunday = 7 - now.getDay();
+                    if (daysUntilSunday === 7) daysUntilSunday = 0;
+
+                    var sunday = new Date(now);
+                    sunday.setDate(now.getDate() + daysUntilSunday);
+                    sunday.setHours(23, 59, 59, 999);
+                    deadline = sunday.getTime();
+                    localStorage.setItem(storageKey, deadline);
+                }
+
+                function updateTimer() {
+                    var now = new Date().getTime();
+                    var distance = deadline - now;
+
+                    if (distance < 0) {
+                        var newNow = new Date();
+                        var daysUntilSunday = 7 - newNow.getDay();
+                        if (daysUntilSunday === 7) daysUntilSunday = 0;
+
+                        var nextSunday = new Date(newNow);
+                        nextSunday.setDate(newNow.getDate() + daysUntilSunday);
+                        nextSunday.setHours(23, 59, 59, 999);
+                        deadline = nextSunday.getTime();
+                        localStorage.setItem(storageKey, deadline);
+                        distance = deadline - now;
+                    }
+
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    var d = document.getElementById('consult-days');
+                    var h = document.getElementById('consult-hours');
+                    var m = document.getElementById('consult-minutes');
+                    var s = document.getElementById('consult-seconds');
+
+                    if (d) d.textContent = String(days).padStart(2, '0');
+                    if (h) h.textContent = String(hours).padStart(2, '0');
+                    if (m) m.textContent = String(minutes).padStart(2, '0');
+                    if (s) s.textContent = String(seconds).padStart(2, '0');
+                }
+
+                updateTimer();
+                setInterval(updateTimer, 1000);
+            })();
 
         })();
     </script>
