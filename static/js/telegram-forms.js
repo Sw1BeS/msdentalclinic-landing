@@ -220,68 +220,10 @@ function injectImplantLandingStyles() {
     const style = document.createElement('style');
     style.id = 'implant-offer-quiz-styles';
     style.textContent = `
-        .hero-container-offers{gap:44px}.hero-badge[data-scroll-target]{border:1px solid rgba(51,247,255,.25);font-family:var(--font-display);cursor:pointer}.hero-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap}.hero-main-cta{width:auto;min-width:260px;padding-left:24px;padding-right:24px}.hero-secondary-cta{border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);color:#fff;border-radius:var(--radius-sm);padding:15px 22px;font-family:var(--font-display);font-weight:700;cursor:pointer;transition:all .25s ease}.hero-secondary-cta:hover{background:rgba(255,255,255,.15);transform:translateY(-2px)}
-        .hero-offer-panel{position:relative;min-height:560px;border-radius:34px;padding:28px;background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.18);box-shadow:0 40px 100px rgba(0,0,0,.22);overflow:hidden;backdrop-filter:blur(16px)}.hero-offer-panel:before{content:'';position:absolute;inset:auto -15% -25% auto;width:360px;height:360px;background:radial-gradient(circle,rgba(51,247,255,.28),transparent 68%);border-radius:50%;pointer-events:none}.offer-slider{position:relative;min-height:245px;z-index:2}.offer-slide{position:absolute;inset:0;opacity:0;transform:translateY(16px);transition:opacity .45s ease,transform .45s ease;pointer-events:none}.offer-slide.active{opacity:1;transform:translateY(0);pointer-events:auto}.offer-kicker{display:inline-flex;width:fit-content;margin-bottom:12px;padding:6px 12px;border-radius:999px;background:rgba(51,247,255,.12);color:var(--brand-cyan);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.offer-slide h2{color:#fff;font-size:clamp(26px,4vw,40px);line-height:1.12;margin-bottom:14px}.offer-slide p,.offer-slide li{color:rgba(255,255,255,.78);font-size:15px}.offer-slide ul{margin-top:16px;display:grid;gap:8px;list-style:none}.offer-slide li{position:relative;padding-left:22px}.offer-slide li:before{content:'';width:8px;height:8px;border-radius:50%;background:var(--brand-cyan);position:absolute;left:0;top:8px}
-        .hero-offer-panel .offer-visual-wrap{position:absolute;right:-30px;bottom:74px;width:min(72%,430px);aspect-ratio:1;border-radius:50%;overflow:hidden;border:4px solid rgba(51,247,255,.24);box-shadow:0 0 70px rgba(51,247,255,.18);z-index:1}.hero-offer-panel .offer-visual{width:100%;height:100%;object-fit:cover;object-position:center 35%;transform:scale(1.55)}.hero-offer-panel .offer-bottom-row{position:absolute;left:28px;right:28px;bottom:24px;z-index:3;display:flex;align-items:flex-end;justify-content:space-between;gap:18px}.offer-countdown,.inline-countdown,.result-offer-box{border:1px solid rgba(51,247,255,.2);background:rgba(10,28,34,.72);border-radius:18px;padding:16px}.countdown-label,.inline-countdown span:first-child{display:block;color:rgba(255,255,255,.74);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}.countdown-grid,.mini-countdown{display:grid;grid-template-columns:repeat(4,minmax(50px,1fr));gap:8px}.countdown-grid span,.mini-countdown span{display:grid;place-items:center;min-width:54px;padding:8px 6px;border-radius:12px;background:rgba(255,255,255,.1);color:#fff}.countdown-grid strong,.mini-countdown b{font-size:20px;line-height:1}.countdown-grid small,.mini-countdown span{font-size:10px;color:rgba(255,255,255,.68);text-transform:uppercase}.offer-controls{display:flex;gap:10px}.offer-dot{width:11px;height:11px;border-radius:999px;border:0;background:rgba(255,255,255,.32);cursor:pointer;transition:all .25s ease}.offer-dot.active{width:34px;background:var(--brand-cyan)}.inline-countdown{margin:-4px 0 20px;background:rgba(67,156,195,.12);border-color:rgba(67,156,195,.28)}.inline-countdown span:first-child{color:rgba(255,255,255,.72);margin-bottom:4px}.inline-countdown strong{color:#fff;font-size:16px;letter-spacing:.02em}
         .quiz-section{background:linear-gradient(180deg,#f8fbff 0%,#fff 100%)}.quiz-shell{display:grid;grid-template-columns:1fr;gap:28px;align-items:start;padding:28px;border-radius:36px;background:linear-gradient(145deg,#fff 0%,#f4fbff 100%);border:1px solid rgba(67,156,195,.15);box-shadow:0 40px 100px rgba(26,43,51,.1)}.quiz-copy .section-title,.quiz-copy .section-subtitle,.quiz-copy .section-label{text-align:left;margin-left:0;margin-right:0}.quiz-copy .section-label:before,.quiz-copy .section-label:after{display:none}.quiz-trust-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.quiz-trust-row span{border-radius:999px;padding:8px 12px;background:rgba(67,156,195,.1);color:var(--brand-dark);font-size:12px;font-weight:800}.quiz-card{position:relative;overflow:hidden;min-height:520px;padding:26px;border-radius:28px;background:#1a2b33;color:#fff;box-shadow:0 28px 80px rgba(26,43,51,.2)}.quiz-card:after{content:'';position:absolute;right:-120px;top:-120px;width:280px;height:280px;background:radial-gradient(circle,rgba(51,247,255,.18),transparent 70%);pointer-events:none}.quiz-progress{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:28px;position:relative;z-index:1}.quiz-progress span{height:6px;border-radius:999px;background:rgba(255,255,255,.16)}.quiz-progress span.active{background:var(--brand-cyan)}.quiz-step,.quiz-result{display:none;position:relative;z-index:1}.quiz-step.active,.quiz-result.active{display:block;animation:quizFade .28s ease}@keyframes quizFade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}.quiz-step-label,.quiz-result-badge{display:inline-flex;width:fit-content;margin-bottom:14px;padding:6px 12px;border-radius:999px;color:var(--brand-cyan);background:rgba(51,247,255,.12);font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.quiz-step h3,.quiz-result h3{color:#fff;font-size:clamp(24px,3vw,34px);margin-bottom:22px}.quiz-result p{color:rgba(255,255,255,.78);margin-bottom:18px}.quiz-options{display:grid;gap:12px}.quiz-options button{width:100%;border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:16px 18px;background:rgba(255,255,255,.08);color:#fff;font-family:var(--font-display);font-size:15px;font-weight:700;text-align:left;cursor:pointer;transition:all .25s ease}.quiz-options button:hover,.quiz-options button.selected{border-color:var(--brand-cyan);background:rgba(51,247,255,.14);transform:translateX(4px)}.result-offer-box{margin:18px 0 22px;background:rgba(51,247,255,.08)}.result-offer-box strong{display:block;color:#fff;margin-bottom:12px}.quiz-lead-form{display:grid;gap:0}.quiz-card .form-success h3,.quiz-card .form-success p{color:#fff}.quiz-card .form-input{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.24)}.quiz-card .form-input::placeholder{color:rgba(255,255,255,.55)}.quiz-card .form-label,.quiz-card .form-privacy{color:rgba(255,255,255,.72)!important}
-        @media(min-width:1024px){.hero-container-offers{grid-template-columns:minmax(0,.92fr) minmax(420px,1fr)}.quiz-shell{grid-template-columns:.9fr 1.1fr;padding:46px}}@media(max-width:767px){.hero-actions{justify-content:center}.hero-main-cta,.hero-secondary-cta{width:100%}.hero-offer-panel{min-height:650px;padding:22px;border-radius:26px}.offer-slider{min-height:320px}.offer-visual-wrap{right:50%;transform:translateX(50%);bottom:128px;width:260px}.offer-bottom-row{left:18px;right:18px;bottom:18px;align-items:stretch;flex-direction:column}.countdown-grid,.mini-countdown{grid-template-columns:repeat(4,1fr)}.countdown-grid span,.mini-countdown span{min-width:0}.offer-controls{justify-content:center}.quiz-shell{padding:18px;border-radius:24px}.quiz-card{padding:20px;min-height:570px;border-radius:22px}.quiz-options button{font-size:14px;padding:14px 16px}}
+        @media(min-width:1024px){.quiz-shell{grid-template-columns:.9fr 1.1fr;padding:46px}}@media(max-width:767px){.quiz-shell{padding:18px;border-radius:24px}.quiz-card{padding:20px;min-height:570px;border-radius:22px}.quiz-options button{font-size:14px;padding:14px 16px}}
     `;
     document.head.appendChild(style);
-}
-
-function enhanceHeroOfferBlock() {
-    const hero = document.querySelector('.hero');
-    const container = document.querySelector('.hero .hero-container');
-    const content = document.querySelector('.hero-content');
-    const imageContainer = document.querySelector('.hero-image-container');
-    if (!hero || !container || !content || !imageContainer || document.querySelector('[data-offer-carousel]')) return;
-
-    container.classList.add('hero-container-offers');
-
-    const badge = content.querySelector('.hero-badge');
-    if (badge) {
-        badge.innerHTML = '<span class="hero-badge-dot"></span>Безкоштовна консультація — місця обмежені';
-        badge.setAttribute('data-scroll-target', 'form-top');
-        badge.setAttribute('role', 'button');
-        badge.setAttribute('tabindex', '0');
-        badge.removeAttribute('onclick');
-    }
-
-    const subtitle = content.querySelector('.hero-subtitle');
-    if (subtitle) {
-        subtitle.textContent = 'Отримайте консультацію імплантолога, попередній план лікування та зрозумійте варіанти відновлення — від одиничного імпланта до All-on-4 / All-on-6.';
-    }
-
-    const features = content.querySelectorAll('.hero-feature span');
-    if (features[0]) features[0].textContent = 'Системи Straumann 🇨🇭, Megagen 🇰🇷 та інші перевірені бренди';
-    if (features[1]) features[1].textContent = 'Тимчасові конструкції орієнтовно за 7 днів';
-    if (features[2]) features[2].textContent = 'Прозорий план: діагностика → хірургія → тимчасові зуби → постійний протез';
-
-    if (!content.querySelector('.hero-actions')) {
-        content.insertAdjacentHTML('beforeend', `
-            <div class="hero-actions">
-                <button class="btn-primary hero-main-cta" type="button" data-scroll-target="quiz"><span class="btn-text">Пройти мініквіз і отримати бонус</span></button>
-                <button class="hero-secondary-cta" type="button" data-scroll-target="form-top">Записатися одразу</button>
-            </div>
-        `);
-    }
-
-    const img = imageContainer.querySelector('img');
-    const src = img ? img.getAttribute('src') : 'static/img/landing/hero-implant.png';
-    imageContainer.outerHTML = `
-        <div class="hero-offer-panel reveal" data-offer-carousel>
-            <div class="offer-slider" aria-live="polite">
-                <article class="offer-slide active" data-offer-slide><span class="offer-kicker">Офер 01</span><h2>Безкоштовна консультація імплантолога</h2><p>Для пацієнтів, які залишили заявку з цієї посадкової сторінки.</p><ul><li>Оцінка клінічної ситуації</li><li>Попередній план лікування</li><li>Пояснення варіантів за бюджетом</li></ul></article>
-                <article class="offer-slide" data-offer-slide><span class="offer-kicker">Офер 02</span><h2>Тимчасові зуби орієнтовно за 7 днів</h2><p>Актуально для пацієнтів, які не хочуть залишатися без посмішки під час лікування.</p><ul><li>План тимчасового протезування</li><li>Підбір імплантаційної системи</li><li>Пояснення етапів і строків</li></ul></article>
-                <article class="offer-slide" data-offer-slide><span class="offer-kicker">Офер 03</span><h2>All-on-4 / All-on-6 під ключ</h2><p>Комплексне відновлення зубного ряду з чіткою послідовністю етапів.</p><ul><li>Сценарії для повної реабілітації</li><li>Порівняння систем імплантів</li><li>Орієнтир по термінах і підготовці</li></ul></article>
-            </div>
-            <div class="offer-visual-wrap"><img class="offer-visual" src="${src}" alt="Дентальний імплант" width="520" height="520" loading="eager"></div>
-            <div class="offer-bottom-row">
-                <div class="offer-countdown" data-countdown="main" data-countdown-hours="48"><span class="countdown-label">Персональний офер активний ще:</span><div class="countdown-grid" aria-live="polite"><span><strong data-countdown-days>02</strong><small>дні</small></span><span><strong data-countdown-hours>00</strong><small>год</small></span><span><strong data-countdown-minutes>00</strong><small>хв</small></span><span><strong data-countdown-seconds>00</strong><small>сек</small></span></div></div>
-                <div class="offer-controls" aria-label="Перемикання оферів"><button type="button" class="offer-dot active" data-offer-dot aria-label="Офер 1"></button><button type="button" class="offer-dot" data-offer-dot aria-label="Офер 2"></button><button type="button" class="offer-dot" data-offer-dot aria-label="Офер 3"></button></div>
-            </div>
-        </div>
-    `;
 }
 
 function enhanceTopConsultationForm() {
@@ -327,28 +269,61 @@ function initOfferCarousel() {
     const carousel = document.querySelector('[data-offer-carousel]');
     if (!carousel || carousel.dataset.bound === 'true') return;
     carousel.dataset.bound = 'true';
+    
     const slides = Array.prototype.slice.call(carousel.querySelectorAll('[data-offer-slide]'));
     const dots = Array.prototype.slice.call(carousel.querySelectorAll('[data-offer-dot]'));
+    const heroImage = document.getElementById('hero-slider-img');
     let current = 0;
     let timer = null;
+    let isHovered = false;
 
     function showSlide(index) {
         current = (index + slides.length) % slides.length;
-        slides.forEach(function (slide, i) { slide.classList.toggle('active', i === current); });
-        dots.forEach(function (dot, i) { dot.classList.toggle('active', i === current); });
+        
+        slides.forEach(function (slide, i) { 
+            slide.classList.toggle('active', i === current); 
+        });
+        
+        dots.forEach(function (dot, i) { 
+            dot.classList.toggle('active', i === current); 
+        });
+        
+        // Dynamic image swap
+        if (heroImage && slides[current].dataset.image) {
+            heroImage.style.opacity = '0';
+            setTimeout(() => {
+                heroImage.src = slides[current].dataset.image;
+                heroImage.style.opacity = '1';
+            }, 300);
+        }
+    }
+
+    function startTimer() {
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && !isHovered) {
+            clearInterval(timer);
+            timer = setInterval(function () { showSlide(current + 1); }, 5200);
+        }
     }
 
     dots.forEach(function (dot, index) {
         dot.addEventListener('click', function () {
-            if (timer) window.clearInterval(timer);
+            clearInterval(timer);
             showSlide(index);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) timer = window.setInterval(function () { showSlide(current + 1); }, 5200);
+            startTimer();
         });
     });
 
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        timer = window.setInterval(function () { showSlide(current + 1); }, 5200);
-    }
+    carousel.addEventListener('mouseenter', function() {
+        isHovered = true;
+        clearInterval(timer);
+    });
+
+    carousel.addEventListener('mouseleave', function() {
+        isHovered = false;
+        startTimer();
+    });
+
+    startTimer();
 }
 
 function initCountdowns() {
@@ -448,7 +423,6 @@ function initScrollButtons() {
 function bootImplantLandingEnhancements() {
     if (!isImplantLanding()) return;
     injectImplantLandingStyles();
-    enhanceHeroOfferBlock();
     enhanceTopConsultationForm();
     insertMiniQuizSection();
     initOfferCarousel();

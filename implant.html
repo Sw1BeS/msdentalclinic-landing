@@ -55,7 +55,7 @@
          HERO SECTION
          ============================ -->
     <section class="hero" id="hero">
-        <div class="hero-container">
+        <div class="hero-container hero-container-offers">
             <div class="hero-content">
                 <div class="hero-badge reveal" onclick="openContactForm()" style="cursor: pointer;">
                     <span class="hero-badge-dot"></span>
@@ -69,41 +69,90 @@
                 </h1>
 
                 <p class="hero-subtitle">
-                    Безболісна, швидка та довгострокова імплантація зубів — це реальність в MS Dental Clinic. Від
-                    одиничних імплантацій до тотальних робіт.
+                    Отримайте консультацію імплантолога, попередній план лікування та зрозумійте варіанти відновлення — від одиничного імпланта до All-on-4 / All-on-6.
                 </p>
 
                 <div class="hero-features">
                     <div class="hero-feature">
                         <div class="hero-feature-icon">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                            </svg>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
                         </div>
-                        <span>Системи Straumann 🇨🇭 та Megagen 🇰🇷</span>
+                        <span>Системи Straumann 🇨🇭, Megagen 🇰🇷 та інші перевірені бренди</span>
                     </div>
                     <div class="hero-feature">
                         <div class="hero-feature-icon">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                            </svg>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
                         </div>
-                        <span>Тимчасові конструкції за 1 тиждень</span>
+                        <span>Тимчасові конструкції орієнтовно за 7 днів</span>
                     </div>
                     <div class="hero-feature">
                         <div class="hero-feature-icon">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                            </svg>
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
                         </div>
-                        <span>Тотальна реабілітація під ключ</span>
+                        <span>Прозорий план: діагностика → хірургія → тимчасові зуби → постійний протез</span>
                     </div>
+                </div>
+
+                <div class="hero-actions">
+                    <button class="btn-primary hero-main-cta" type="button" data-scroll-target="quiz"><span class="btn-text">Пройти мініквіз і отримати бонус</span></button>
+                    <button class="hero-secondary-cta" type="button" data-scroll-target="form-top">Записатися одразу</button>
                 </div>
             </div>
 
-            <div class="hero-image-container">
-                <img class="hero-image" src="static/img/landing/hero-implant.png" alt="Дентальний імплант" width="520"
-                    height="520" loading="eager">
+            <div class="hero-offer-panel reveal" data-offer-carousel>
+                <div class="hero-offer-slider" aria-live="polite">
+                    <article class="hero-offer-slide active" data-offer-slide data-image="static/img/landing/hero-implant.png">
+                        <span class="hero-offer-kicker">Офер 01</span>
+                        <h2>Безкоштовна консультація імплантолога</h2>
+                        <p>Для пацієнтів, які залишили заявку з цієї посадкової сторінки.</p>
+                        <ul>
+                            <li>Оцінка клінічної ситуації</li>
+                            <li>Попередній план лікування</li>
+                            <li>Пояснення варіантів за бюджетом</li>
+                        </ul>
+                    </article>
+                    <article class="hero-offer-slide" data-offer-slide data-image="static/img/landing/offer-straumann.png">
+                        <span class="hero-offer-kicker">Офер 02</span>
+                        <h2>Тимчасові зуби орієнтовно за 7 днів</h2>
+                        <p>Актуально для пацієнтів, які не хочуть залишатися без посмішки під час лікування.</p>
+                        <ul>
+                            <li>План тимчасового протезування</li>
+                            <li>Підбір імплантаційної системи</li>
+                            <li>Пояснення етапів і строків</li>
+                        </ul>
+                    </article>
+                    <article class="hero-offer-slide" data-offer-slide data-image="static/img/landing/offer-allon6.png">
+                        <span class="hero-offer-kicker">Офер 03</span>
+                        <h2>All-on-4 / All-on-6 під ключ</h2>
+                        <p>Комплексне відновлення зубного ряду з чіткою послідовністю етапів.</p>
+                        <ul>
+                            <li>Сценарії для повної реабілітації</li>
+                            <li>Порівняння систем імплантів</li>
+                            <li>Орієнтир по термінах і підготовці</li>
+                        </ul>
+                    </article>
+                </div>
+                
+                <div class="hero-offer-visual-wrap">
+                    <img class="hero-offer-visual" src="static/img/landing/hero-implant.png" alt="Дентальний імплант" width="520" height="520" loading="eager" id="hero-slider-img">
+                </div>
+                
+                <div class="hero-offer-bottom-row">
+                    <div class="hero-offer-countdown" data-countdown="main" data-countdown-hours="48">
+                        <span class="hero-countdown-label">Персональний офер активний ще:</span>
+                        <div class="hero-countdown-grid" aria-live="polite">
+                            <span><strong data-countdown-days>02</strong><small>дні</small></span>
+                            <span><strong data-countdown-hours>00</strong><small>год</small></span>
+                            <span><strong data-countdown-minutes>00</strong><small>хв</small></span>
+                            <span><strong data-countdown-seconds>00</strong><small>сек</small></span>
+                        </div>
+                    </div>
+                    <div class="hero-offer-controls" aria-label="Перемикання оферів">
+                        <button type="button" class="hero-offer-dot active" data-offer-dot aria-label="Офер 1"></button>
+                        <button type="button" class="hero-offer-dot" data-offer-dot aria-label="Офер 2"></button>
+                        <button type="button" class="hero-offer-dot" data-offer-dot aria-label="Офер 3"></button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
