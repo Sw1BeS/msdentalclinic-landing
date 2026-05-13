@@ -211,102 +211,104 @@
         <div class="section-container">
             <div class="section-header reveal">
                 <p class="section-label">Гарячі пропозиції</p>
-                <h2 class="section-title">Обмежені пропозиції цього місяця</h2>
-                <p class="section-subtitle">Встигніть скористатися спеціальними умовами до кінця акції</p>
+                <h2 class="section-title">Спеціальні пропозиції цього місяця</h2>
+                <p class="section-subtitle">Встигніть скористатися вигідними умовами для вашої посмішки</p>
             </div>
 
             <div class="offers-slider-container reveal">
-                <button class="slider-nav prev" id="offer-prev" aria-label="Попередній оффер">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M15 18l-6-6 6-6"/>
-                    </svg>
-                </button>
-
                 <div class="offers-slider-track" id="offers-track">
-                    <!-- Offer 1: Free Consultation with Countdown -->
+                    <!-- Offer 1: Free Consultation -->
                     <div class="offer-card active" data-offer="1">
-                        <div class="offer-badge">🔥 ХІТ</div>
-                        <div class="offer-image">
-                            <img src="static/img/landing/IMG_5458.JPG" alt="Безкоштовна консультація" loading="lazy">
-                        </div>
-                        <div class="offer-content">
-                            <h3>Безкоштовна консультація імплантолога</h3>
-                            <p>Повний огляд, 3D-діагностика та план лікування безкоштовно при запису до кінця тижня</p>
-                            <div class="offer-price">
-                                <span class="old-price">2 500 ₴</span>
-                                <span class="new-price">0 ₴</span>
+                        <div class="offer-card-inner">
+                            <div class="offer-visual">
+                                <div class="offer-badge">🔥 ХІТ</div>
+                                <img src="static/img/landing/offer-consultation.png" alt="Безкоштовна консультація" loading="lazy">
                             </div>
-                            <div class="offer-timer" id="consultation-timer">
-                                <div class="timer-label">До завершення акції:</div>
-                                <div class="timer-display">
-                                    <span class="timer-item"><span class="timer-value" id="consult-days">00</span><small>днів</small></span>
-                                    <span class="timer-separator">:</span>
-                                    <span class="timer-item"><span class="timer-value" id="consult-hours">00</span><small>год</small></span>
-                                    <span class="timer-separator">:</span>
-                                    <span class="timer-item"><span class="timer-value" id="consult-minutes">00</span><small>хв</small></span>
-                                    <span class="timer-separator">:</span>
-                                    <span class="timer-item"><span class="timer-value" id="consult-seconds">00</span><small>сек</small></span>
+                            <div class="offer-content">
+                                <h3>Безкоштовна консультація імплантолога</h3>
+                                <p class="offer-desc">Повний огляд, 3D-діагностика та індивідуальний план лікування — безкоштовно при запису до кінця тижня.</p>
+                                <div class="offer-price">
+                                    <span class="old-price">2 500 ₴</span>
+                                    <span class="new-price">0 ₴</span>
                                 </div>
+                                <div class="offer-timer" id="consultation-timer">
+                                    <div class="timer-label">⏰ До завершення акції:</div>
+                                    <div class="timer-display">
+                                        <span class="timer-item"><span class="timer-value" id="consult-days">00</span><small>днів</small></span>
+                                        <span class="timer-separator">:</span>
+                                        <span class="timer-item"><span class="timer-value" id="consult-hours">00</span><small>год</small></span>
+                                        <span class="timer-separator">:</span>
+                                        <span class="timer-item"><span class="timer-value" id="consult-minutes">00</span><small>хв</small></span>
+                                        <span class="timer-separator">:</span>
+                                        <span class="timer-item"><span class="timer-value" id="consult-seconds">00</span><small>сек</small></span>
+                                    </div>
+                                </div>
+                                <button class="btn-primary offer-btn" onclick="openContactForm()">Забронювати місце</button>
                             </div>
-                            <button class="btn-primary offer-btn" onclick="openContactForm()">Забронювати місце</button>
                         </div>
                     </div>
 
                     <!-- Offer 2: Straumann Premium -->
                     <div class="offer-card" data-offer="2">
-                        <div class="offer-badge special">💎 ПРЕМІУМ</div>
-                        <div class="offer-image">
-                            <img src="static/img/landing/IMG_5460.JPG" alt="Straumann імплантація" loading="lazy">
-                        </div>
-                        <div class="offer-content">
-                            <h3>Імплантація Straumann зі знижкою 15%</h3>
-                            <p>Швейцарська якість за спеціальною ціною. Тимчасова конструкція у подарунок</p>
-                            <div class="offer-price">
-                                <span class="old-price">від 25 000 ₴</span>
-                                <span class="new-price">від 21 250 ₴</span>
+                        <div class="offer-card-inner">
+                            <div class="offer-visual">
+                                <div class="offer-badge special">💎 ПРЕМІУМ</div>
+                                <img src="static/img/landing/offer-straumann.png" alt="Straumann імплантат" loading="lazy">
                             </div>
-                            <ul class="offer-benefits">
-                                <li>✓ Пожиттєва гарантія</li>
-                                <li>✓ Приживлення 98.8%</li>
-                                <li>✓ Тимчасовий зуб за 7 днів</li>
-                            </ul>
-                            <button class="btn-primary offer-btn" onclick="openContactForm()">Отримати знижку</button>
+                            <div class="offer-content">
+                                <h3>Імплантація Straumann 🇨🇭 зі знижкою 15%</h3>
+                                <p class="offer-desc">Швейцарська якість за спеціальною ціною. Тимчасова конструкція у подарунок.</p>
+                                <div class="offer-price">
+                                    <span class="old-price">від 25 000 ₴</span>
+                                    <span class="new-price">від 21 250 ₴</span>
+                                </div>
+                                <ul class="offer-benefits">
+                                    <li>✓ Пожиттєва гарантія від виробника</li>
+                                    <li>✓ Приживлення 98.8% — найвище у світі</li>
+                                    <li>✓ Тимчасовий зуб за 7 днів</li>
+                                </ul>
+                                <button class="btn-primary offer-btn" onclick="openContactForm()">Отримати знижку</button>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Offer 3: All-on-6 -->
                     <div class="offer-card" data-offer="3">
-                        <div class="offer-badge mega">⚡ ALL-ON-6</div>
-                        <div class="offer-image">
-                            <img src="static/img/landing/IMG_5461.JPG" alt="All-on-6 реабілітація" loading="lazy">
-                        </div>
-                        <div class="offer-content">
-                            <h3>Тотальна реабілітація All-on-6</h3>
-                            <p>Повне відновлення щелепи за 1 день. Фіксована ціна під ключ</p>
-                            <div class="offer-price">
-                                <span class="old-price">180 000 ₴</span>
-                                <span class="new-price">149 000 ₴</span>
+                        <div class="offer-card-inner">
+                            <div class="offer-visual">
+                                <div class="offer-badge mega">⚡ ALL-ON-6</div>
+                                <img src="static/img/landing/offer-allon6.png" alt="Результат All-on-6" loading="lazy">
                             </div>
-                            <ul class="offer-benefits">
-                                <li>✓ 6 імплантатів Megagen</li>
-                                <li>✓ Тимчасовий протез включено</li>
-                                <li>✓ Гарантія 5 років</li>
-                            </ul>
-                            <button class="btn-primary offer-btn" onclick="openContactForm()">Дізнатися деталі</button>
+                            <div class="offer-content">
+                                <h3>Тотальна реабілітація All-on-6</h3>
+                                <p class="offer-desc">Повне відновлення щелепи. Фіксована ціна під ключ — від діагностики до готової посмішки.</p>
+                                <div class="offer-price">
+                                    <span class="old-price">180 000 ₴</span>
+                                    <span class="new-price">149 000 ₴</span>
+                                </div>
+                                <ul class="offer-benefits">
+                                    <li>✓ 6 імплантатів Megagen AnyRidge</li>
+                                    <li>✓ Тимчасовий протез включено</li>
+                                    <li>✓ Гарантія 5 років на конструкцію</li>
+                                </ul>
+                                <button class="btn-primary offer-btn" onclick="openContactForm()">Дізнатися деталі</button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <button class="slider-nav next" id="offer-next" aria-label="Наступний оффер">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M9 18l6-6-6-6"/>
-                    </svg>
-                </button>
-
-                <div class="slider-dots" id="offer-dots">
-                    <button class="dot active" data-dot="1"></button>
-                    <button class="dot" data-dot="2"></button>
-                    <button class="dot" data-dot="3"></button>
+                <div class="slider-controls">
+                    <button class="slider-nav prev" id="offer-prev" aria-label="Попередній оффер">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <div class="slider-dots" id="offer-dots">
+                        <button class="dot active" data-dot="1"></button>
+                        <button class="dot" data-dot="2"></button>
+                        <button class="dot" data-dot="3"></button>
+                    </div>
+                    <button class="slider-nav next" id="offer-next" aria-label="Наступний оффер">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -1405,14 +1407,10 @@
                 var autoSlideInterval;
 
                 function showSlide(index) {
-                    cards.forEach(function (card, i) {
-                        card.classList.remove('active', 'prev');
-                        if (i === index) {
-                            card.classList.add('active');
-                        } else if (i < index) {
-                            card.classList.add('prev');
-                        }
+                    cards.forEach(function (card) {
+                        card.classList.remove('active');
                     });
+                    if (cards[index]) cards[index].classList.add('active');
 
                     dots.forEach(function (dot, i) {
                         dot.classList.toggle('active', i === index);
