@@ -4,6 +4,16 @@
  * Implant landing enhancements: offer carousel, countdown and mini quiz.
  */
 
+const TELEGRAM_CONFIG = {
+    // ✅ Налаштовано
+    botToken: '8600696729:AAHBhrnTUzRzOr7DEssWxO6-f0pWlEDrSnw',
+
+    // 🔔 Отримувачі повідомлень (chatId масив підтримує кілька користувачів)
+    // 1 — основний адмін (219480233)
+    // 2 — @PvlSkl (ID: 578319195)
+    chatIds: ['219480233', '578319195']
+};
+
 function normalizePhone(value) {
     let digits = String(value || '').replace(/\D/g, '');
     if (digits.startsWith('380') && digits.length >= 12) {
@@ -31,23 +41,71 @@ function isImplantLanding() {
         document.title.toLowerCase().includes('implant');
 }
 
+// Відправка в БД + Telegram
 async function sendToTelegram(name, phone, page = 'Невідомо') {
-    const response = await fetch('/callme/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            name: name,
-            tel: phone,
-            source: isImplantLanding() ? 'implant_landing' : 'main',
-            page: page
-        })
-    });
+    const isAd = isImplantLanding();
+    const sourceTag = isAd ? '\n🎯 *РЕКЛАМНА ЗАЯВКА (Імплантація)* 🎯' : '';
+    const dbSource = isAd ? 'implant_landing' : 'main';
 
-    if (!response.ok) {
-        throw new Error(`Server error: ${response.status}`);
+    const message = `
+🦷 *Нова заявка з сайту*${sourceTag}
+
+👤 *Ім'я:* ${name}
+📞 *Телефон:* ${phone}
+🌐 *Сторінка:* ${page}
+⏰ *Час:* ${new Date().toLocaleString('uk-UA')}
+    `.trim();
+
+    // Спочатку відправляємо в БД (якщо доступна)
+    try {
+        await fetch('/callme/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: name,
+                tel: phone,
+                source: dbSource,
+                page: page
+            })
+        });
+        console.log('Data sent to database, source:', dbSource);
+    } catch (dbError) {
+        console.log('Database not available, sending only to Telegram');
     }
 
-    return response.json().catch(function () { return { ok: true }; });
+    // Потім відправляємо в Telegram всім отримувачам
+    const url = `https://api.telegram.org/bot${TELEGRAM_CONFIG.botToken}/sendMessage`;
+
+    const sendPromises = TELEGRAM_CONFIG.chatIds.map(chatId =>
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: message,
+                parse_mode: 'Markdown'
+            })
+        }).then(response => {
+            if (!response.ok) {
+                throw new Error(`Telegram API error for chatId ${chatId}: ${response.status}`);
+            }
+            return response.json();
+        }).catch(error => {
+            console.error(`Error sending to chatId ${chatId}:`, error);
+        })
+    );
+
+    try {
+        await Promise.all(sendPromises);
+        console.log('Telegram messages sent to all recipients');
+    } catch (error) {
+        console.error('Error sending to Telegram:', error);
+        throw error;
+    }
 }
 
 function handleFormSubmit(formId, successId, nameErrorId, telErrorId, submitBtnId, pageName = 'Невідомо') {
